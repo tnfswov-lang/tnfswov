@@ -2,6 +2,12 @@ backend:
   name: git-gateway
   branch: main
 
+identity_url: https://dancing-crumble-e35ce5.netlify.app/.netlify/identity
+gateway_url: https://dancing-crumble-e35ce5.netlify.app/.netlify/git
+
+site_url: https://tnfswov.in
+display_url: https://tnfswov.in
+
 media_folder: "images"
 public_folder: "/images"
 
