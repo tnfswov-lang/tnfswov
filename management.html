@@ -16,8 +16,12 @@
         th { background-color: #0056b3; color: white; font-size: 16px; }
         tr:nth-child(even) { background-color: #f9f9f9; }
         tr:hover { background-color: #f1f5f9; }
-        .role { font-weight: bold; color: #0056b3; }
+        .role { font-weight: bold; color: #0056b3; width: 35%; }
         .name { font-size: 16px; font-weight: 600; color: #222; }
+        
+        /* இரு பெயர்களை பக்கவாட்டில் அமைப்பதற்கான குறியீடு */
+        .flex-names { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .flex-names span { width: 48%; }
     </style>
 </head>
 <body>
@@ -40,11 +44,13 @@
                 <td class="name">Dr.K. முஹம்மது யஹ்யா</td>
             </tr>
             <tr>
-                <td class="role" rowspan="2">மாநிலத் துணைத் தலைவர்கள்</td>
-                <td class="name">R. சாக்யா பிரபு</td>
-            </tr>
-            <tr>
-                <td class="name">M.E. அமோஸ்</td>
+                <td class="role">மாநிலத் துணைத் தலைவர்கள்</td>
+                <td class="name">
+                    <div class="flex-names">
+                        <span>R. சாக்யா பிரபு</span>
+                        <span>M.E. அமோஸ்</span>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td class="role">பொதுச் செயலாளர்</td>
@@ -52,7 +58,7 @@
             </tr>
             <tr>
                 <td class="role">பொருளாளர்</td>
-                <td class="name">M. Mahalakshmi BSc.,</td>
+                <td class="name">M. மஹாலக்ஷ்மி BSc.,</td>
             </tr>
         </tbody>
     </table>
