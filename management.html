@@ -3,66 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>நிர்வாகக் குழு - தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
+    <title>நிர்வாகிகள் - TNFSWOV</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f7f6; color: #333; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .back-btn { display: inline-block; margin-bottom: 20px; padding: 10px 18px; background: #008cba; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .back-btn:hover { background: #006687; }
-        h1 { color: #0056b3; text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 10px; margin-bottom: 25px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background-color: #0b5ed7;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #0a58ca;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        .page-title {
+            text-align: center;
+            color: #0d6efd;
+            margin-bottom: 25px;
+            font-size: 24px;
+            border-bottom: 3px solid #0d6efd;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .title-wrapper {
+            text-align: center;
+        }
         
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 14px 15px; text-align: left; border-bottom: 1px solid #e0e0e0; }
-        th { background-color: #0056b3; color: white; font-size: 16px; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f1f5f9; }
-        .role { font-weight: bold; color: #0056b3; width: 35%; }
-        .name { font-size: 16px; font-weight: 600; color: #222; }
+        /* வண்ணக் கார்டுகள் வடிவமைப்பு */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            border-left: 6px solid #0d6efd;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
         
-        /* இரு பெயர்களை பக்கவாட்டில் அமைப்பதற்கான குறியீடு */
-        .flex-names { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .flex-names span { width: 48%; }
+        .role {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #111;
+        }
+
+        /* பதவிக்கேற்ற தனித்தனி வண்ணங்கள் */
+        .president { border-left-color: #d63384; background-color: #fff0f6; }
+        .president .role { color: #d63384; }
+
+        .vice-president { border-left-color: #0d6efd; background-color: #f0f7ff; }
+        .vice-president .role { color: #0d6efd; }
+
+        .secretary { border-left-color: #198754; background-color: #f0fff4; }
+        .secretary .role { color: #198754; }
+
+        .treasurer { border-left-color: #fd7e14; background-color: #fff9f2; }
+        .treasurer .role { color: #fd7e14; }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="back-btn">← முகப்புப் பக்கத்திற்குச் செல்ல</a>
-    
-    <h1>நிர்வாகக் குழு (Management)</h1>
+    <header>
+        <h1 style="margin:0; font-size: 22px;">தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</h1>
+    </header>
 
-    <table>
-        <thead>
-            <tr>
-                <th>பதவி / பொறுப்பு</th>
-                <th>நிர்வாகி பெயர்</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="role">நிறுவனர் & மாநிலத் தலைவர்</td>
-                <td class="name">Dr.K. முஹம்மது யஹ்யா</td>
-            </tr>
-            <tr>
-                <td class="role">மாநிலத் துணைத் தலைவர்கள்</td>
-                <td class="name">
-                    <div class="flex-names">
-                        <span>R. சாக்யா பிரபு</span>
-                        <span>M.E. அமோஸ்</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="role">பொதுச் செயலாளர்</td>
-                <td class="name">Dr.N. கோபி B.Com., MA.,M.Phil.,MBA.,M.Phil.,P.hD.</td>
-            </tr>
-            <tr>
-                <td class="role">பொருளாளர்</td>
-                <td class="name">M. மஹாலக்ஷ்மி BSc.,</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <nav>
+        <a href="index.html">முகப்பு</a>
+        <a href="Management.html">நிர்வாகம்</a>
+        <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
+    </nav>
+
+    <div class="container">
+        <div class="title-wrapper">
+            <h2 class="page-title">நிர்வாகக் குழு உறுப்பினர்கள்</h2>
+        </div>
+
+        <!-- 1. நிறுவனர் & மாநிலத் தலைவர் -->
+        <div class="card president">
+            <span class="role">நிறுவனர் & மாநிலத் தலைவர்</span>
+            <span class="name">Dr. K. முஹம்மது யஹ்யா</span>
+        </div>
+
+        <!-- 2. மாநிலத் துணைத் தலைவர்கள் -->
+        <div class="card vice-president">
+            <span class="role">மாநிலத் துணைத் தலைவர்</span>
+            <span class="name">R. சாக்கிய பிரபு M.E.</span>
+        </div>
+
+        <div class="card vice-president">
+            <span class="role">மாநிலத் துணைத் தலைவர்</span>
+            <span class="name">அமோஸ்</span>
+        </div>
+
+        <!-- 3. மாநில பொதுச் செயலாளர் -->
+        <div class="card secretary">
+            <span class="role">மாநில பொதுச் செயலாளர்</span>
+            <span class="name">Dr. N. கோபி</span>
+        </div>
+
+        <!-- 4. பொருளாளர் -->
+        <div class="card treasurer">
+            <span class="role">பொருளாளர்</span>
+            <span class="name">M. Mahalakshmi B.Sc.</span>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</p>
+    </footer>
 
 </body>
 </html>
