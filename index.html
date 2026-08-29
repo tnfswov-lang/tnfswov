@@ -4,134 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        
-        /* Header & Navigation */
-        header { background: #0d5c75; color: white; padding: 15px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo-container { display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .logo-container img { height: 80px; width: auto; border-radius: 50%; background: white; padding: 2px; }
-        header h1 { font-size: 1.6rem; margin-bottom: 5px; }
-        header p { font-size: 0.95rem; opacity: 0.9; }
-        
-        nav { background: #094457; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.95rem; }
-        nav a:hover { color: #25d366; }
-
-        /* Hero Section Banner */
-        .hero { 
-            background-color: #ffffff; 
-            text-align: center; 
-            padding: 20px 0; 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
         }
-        .hero img {
-            max-width: 100%;
+        header {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .logo-title img {
+            width: 70px;
             height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
         }
-
-        /* Main Content */
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-        .section-title { text-align: center; color: #0d5c75; margin-bottom: 25px; font-size: 1.6rem; border-bottom: 3px solid #0d5c75; display: inline-block; padding-bottom: 5px; }
-        .text-center { text-align: center; }
-
-        /* Cards Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-        .card h3 { color: #0d5c75; margin-bottom: 12px; }
-
-        /* Contact Section */
-        .contact-box { background: #0d5c75; color: white; padding: 30px; border-radius: 8px; text-align: center; margin-top: 30px; }
-        .contact-box p { margin: 12px 0; font-size: 1.1rem; }
-        .contact-box a { color: #25d366; text-decoration: none; font-weight: bold; }
-
-        /* Footer */
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
+        nav {
+            background-color: #0b5ed7;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #0a58ca;
+        }
+        .banner img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            background: #e7f1ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #0d6efd;
+        }
+        .contact-info p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- தலைப்பு & லோகோ பகுதி -->
     <header>
-        <div class="logo-container">
-            <img src="Logo.jpg" alt="TNFSWOV Logo">
+        <div class="logo-title">
+            <img src="Logo.jpg" alt="Logo">
             <div>
-                <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வளர்கள் கூட்டமைப்பு</h1>
-                <p>சமூக மாற்றத்திற்கான தன்னார்வச் சக்தி</p>
+                <h1 style="margin: 0; font-size: 22px;">தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</h1>
+                <p style="margin: 5px 0 0 0; font-size: 14px;">சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
             </div>
         </div>
     </header>
 
     <!-- மெனு பகுதி -->
-    <nav class="navbar">
-    <a href="index.html">முகப்பு</a>
-    <a href="Management.html">நிர்வாகம்</a>
-    <a href="#gallery">படங்கள்</a>
-    <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
-    <a href="#contact">தொடர்புகொள்ள</a>
+    <nav>
+        <a href="index.html">முகப்பு</a>
+        <a href="Management.html">நிர்வாகம்</a>
+        <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
+        <a href="#contact">தொடர்புகொள்ள</a>
     </nav>
 
-    <!-- முகப்பு பேனர் -->
-    <section class="hero">
-        <div class="container" style="margin: 0 auto;">
-            <img src="Cover.jpg" alt="TNFSWOV Banner">
-        </div>
-    </section>
+    <!-- பேனர் -->
+    <div class="banner">
+        <img src="Cover.jpg" alt="Banner Image">
+    </div>
 
     <div class="container">
-        <!-- எங்களைப் பற்றி -->
-        <section id="about" style="margin-bottom: 40px;">
-            <div class="text-center">
-                <h2 class="section-title">எங்களைப் பற்றி</h2>
-            </div>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.05rem;">
-                எங்களது கூட்டமைப்பு தமிழ்நாடு முழுவதும் இயங்கி வரும் சமூக நல அமைப்புகள், தொண்டு நிறுவனங்கள் மற்றும் தன்னார்வலர்களை ஒருங்கிணைத்து, சமூகத்தில் பின்தங்கிய மக்களுக்குக் கல்வி, மருத்துவம், சுற்றுச்சூழல் மற்றும் வாழ்வாதார உதவிகளை வழங்க பாடுபடுகிறது.
-            </p>
-        </section>
 
-        <!-- முக்கிய நோக்கங்கள் -->
-        <section id="services" style="margin-bottom: 40px;">
-            <div class="text-center">
-                <h2 class="section-title">முதன்மை நோக்கங்கள்</h2>
-            </div>
-            <div class="grid">
-                <div class="card">
+        <!-- எங்களைப் பற்றி -->
+        <div class="card">
+            <h2>எங்களைப் பற்றி</h2>
+            <p>எங்களது கூட்டமைப்பு தமிழ்நாடு முழுவதும் இயங்கி வரும் சமூக நல அமைப்புகள், தொண்டு நிறுவனங்கள் மற்றும் தன்னார்வலர்களை ஒருங்கிணைத்து, சமூகத்தில் பின்தங்கிய மக்களுக்குக் கல்வி, மருத்துவம், சுற்றுச்சூழல் மற்றும் வாழ்வாதார உதவிகளை வழங்க பாடுபடுகிறது.</p>
+        </div>
+
+        <!-- கொள்கை, நோக்கங்கள் மற்றும் கோட்பாடுகள் -->
+        <div class="card">
+            <h2>கொள்கை, நோக்கங்கள் மற்றும் கோட்பாடுகள்</h2>
+            <div class="grid-3">
+                <div class="box">
                     <h3>கல்வி சேவை</h3>
-                    <p>ஏழை மாணவர்களின் கல்வி மேம்பாட்டிற்கு உதவுதல் மற்றும் கல்வி வழிகாட்டுதல் வழங்குதல்.</p>
+                    <p>ஏழை மாணவர்களின் கல்வி மேம்பாட்டிற்கு உதவுதல், கல்வி வழிகாட்டுதல் மற்றும் கல்வி உதவித்தொகை வழங்குதல்.</p>
                 </div>
-                <div class="card">
+                <div class="box">
                     <h3>சமூக நலப் பணிகள்</h3>
                     <p>மருத்துவ முகாம்கள், குருதி தான விழிப்புணர்வு மற்றும் அவசர உதவி சேவைகள் செய்தல்.</p>
                 </div>
-                <div class="card">
+                <div class="box">
                     <h3>சுற்றுச்சூழல் பாதுகாப்பு</h3>
-                    <p>மரம் நடுதல், பிளாஸ்டிக் ஒழிப்பு மற்றும் இயற்கை வளங்களைப் பாதுகாக்கும் விழிப்புணர்வு.</p>
+                    <p>மரம் நடுதல், நெகிழி (பிளாஸ்டிக்) ஒழிப்பு மற்றும் இயற்கை வளங்களைப் பாதுகாக்கும் விழிப்புணர்வு.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- தொடர்புகொள்ளும் பகுதி -->
-        <section id="contact">
-            <div class="text-center">
-                <h2 class="section-title">தொடர்புகொள்ள</h2>
+        <!-- தொடர்புகொள்ள -->
+        <div class="card" id="contact">
+            <h2>தொடர்புகொள்ள</h2>
+            <div class="contact-info">
+                <p>📍 <strong>முகவரி:</strong> தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு, பட்டுக்கோட்டை, தமிழ்நாடு.</p>
+                <p>📞 <strong>தொலைபேசி / வாட்ஸ்அப்:</strong> +91 9047525222 / +91 9994050550</p>
+                <p>✉️ <strong>மின்னஞ்சல்:</strong> tnfswov@gmail.com</p>
+                <a href="https://wa.me/919994050550" class="whatsapp-btn" target="_blank">💬 வாட்ஸ்அப் வழி தொடர்பு கொள்ள</a>
             </div>
-            <div class="contact-box">
-                <p>📍 <strong>முகவரி:</strong> தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு, தமிழ்நாடு.</p>
-                <p>📞 <strong>தொலைபேசி / வாட்ஸ்அப்:</strong> <a href="tel:+919994050550">+91 9994050550</a></p>
-                <p>✉️ <strong>மின்னஞ்சல்:</strong> <a href="mailto:tnfswov@gmail.com">tnfswov@gmail.com</a></p>
-                <p>💬 <strong>வாட்ஸ்அப் வழி தொடர்பு:</strong> <a href="https://wa.me/919994050550" target="_blank">இங்கே கிளிக் செய்து வாட்ஸ்அப்பில் பேசலாம்</a></p>
-            </div>
-        </section>
+        </div>
+
     </div>
 
-    <!-- அடிக்குறிப்பு -->
     <footer>
-        <p>&copy; 2026 தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+        <p>© 2026 தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </footer>
 
 </body>
