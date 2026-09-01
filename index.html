@@ -16,7 +16,7 @@
     }
     .hero-section img {
       width: 100%;
-      max-height: 380px;
+      max-height: 400px;
       object-fit: cover;
       display: block;
     }
@@ -24,17 +24,17 @@
       background-color: #0d5c63;
       color: white;
       padding: 15px 10px;
-      text-align: center; /* நடுப்பகுதிக்கு மாற்றப்பட்டது */
+      text-align: center;
     }
     .hero-title-box h1 { margin: 0; font-size: 19px; font-weight: bold; text-align: center; }
-    .hero-title-box p { margin: 6px 0 0; font-size: 13.5px; color: #b2dfdb; text-align: center; } /* நடுப்பகுதிக்கு கொண்டு வரப்பட்டது */
+    .hero-title-box p { margin: 6px 0 0; font-size: 13.5px; color: #b2dfdb; text-align: center; }
 
     /* 2. மெனு பட்டை (Navigation Bar) */
     nav { background-color: #083c42; padding: 12px 0; text-align: center; }
-    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 12px; font-size: 14.5px; display: inline-block; padding: 4px 8px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 14.5px; display: inline-block; padding: 4px 8px; }
     nav a:hover { color: #80cbc4; }
 
-    /* 3. அசல் தலைவர் மற்றும் எண் கொண்ட பேனர் */
+    /* 3. தலைவர்/தொலைபேசி எண் கொண்ட பேனர் */
     .banner-section { text-align: center; margin: 0 auto; background-color: #fff; }
     .banner-section img { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 
@@ -62,9 +62,9 @@
 </head>
 <body>
 
-  <!-- 1. டாப் கை கோர்த்த படம் (Top Hero Section) -->
+  <!-- 1. கை கோர்த்த படம் (Hero Section) -->
   <div class="hero-section">
-    <img src="Cover.jpg" alt="TNFSWOV Volunteers">
+    <img src="Cover.jpg" alt="TNFSWOV Volunteers" onerror="this.onerror=null; this.src='cover.jpg';">
     <div class="hero-title-box">
       <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
       <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
@@ -75,13 +75,13 @@
   <nav>
     <a href="#about-us">எங்களைப் பற்றி</a>
     <a href="management.html">நிர்வாகம்</a>
-    <a href="https://forms.gle/..." target="_blank">உறுப்பினராக இணையுங்கள்</a>
+    <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
     <a href="contact.html">தொடர்புகொள்ள</a>
   </nav>
 
   <!-- 3. தலைவர்/தொலைபேசி எண் கொண்ட பேனர் -->
   <div class="banner-section">
-    <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Banner" onerror="this.src='IMG-20260828-WA025.jpg'">
+    <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Banner" onerror="this.onerror=null; this.src='IMG-20260828-WA025.jpg';">
   </div>
 
   <!-- 4. தகவல்கள் பகுதி -->
