@@ -7,22 +7,20 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
     
-    /* 1. ஹெடர் மற்றும் பேனர் பகுதி */
-    .header-banner {
+    /* 1. கை கோர்த்த படம் (Logo.png) */
+    .top-banner {
       width: 100%;
-      background-color: #ffffff;
+      background-color: #0d5c63;
       text-align: center;
-      margin: 0 auto;
     }
-    .header-banner img {
+    .top-banner img {
       width: 100%;
-      max-width: 1000px;
-      height: auto;
+      max-height: 400px;
+      object-fit: cover;
       display: block;
-      margin: 0 auto;
     }
 
-    /* 2. தலைப்பு மற்றும் வரிகள் (நடுப்பகுதி) */
+    /* 2. தலைப்பு மற்றும் நடுப்பகுதி வரி */
     .hero-title-box {
       background-color: #0d5c63;
       color: white;
@@ -37,7 +35,11 @@
     nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 14.5px; display: inline-block; padding: 4px 8px; }
     nav a:hover { color: #80cbc4; }
 
-    /* 4. முதன்மை உள்ளடக்கம் */
+    /* 4. தலைவர் பேனர் */
+    .leader-banner { text-align: center; margin: 0 auto; background-color: #fff; }
+    .leader-banner img { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
+
+    /* 5. முதன்மை உள்ளடக்கம் */
     .content-box {
       max-width: 900px;
       margin: 20px auto;
@@ -61,12 +63,12 @@
 </head>
 <body>
 
-  <!-- 1. டாப் இமேஜ் (கை கோர்த்த படம் / மெயின் பேனர்) -->
-  <div class="header-banner">
-    <img src="logo.png" alt="TNFSWOV Logo" onerror="this.onerror=null; this.src='Logo.jpg'; if(!this.src) this.src='IMG-20260828-WA0250.jpg';">
+  <!-- 1. கை கோர்த்த படம் (Logo.png என உங்கள் GitHub-ல் உள்ளவாறே பொருந்தும்) -->
+  <div class="top-banner">
+    <img src="Logo.png" alt="TNFSWOV Cover Image">
   </div>
 
-  <!-- 2. தலைப்பு மற்றும் நடுவில் அமைந்த வரியுடன் கூடிய பகுதி -->
+  <!-- 2. தலைப்பு மற்றும் நடுப்பகுதி வரி -->
   <div class="hero-title-box">
     <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
     <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
@@ -80,8 +82,8 @@
     <a href="contact.html">தொடர்புகொள்ள</a>
   </nav>
 
-  <!-- 4. அசல் தலைவரின் விவரம் கொண்ட பேனர் -->
-  <div class="header-banner">
+  <!-- 4. தலைவர் பேனர் -->
+  <div class="leader-banner">
     <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Leader Banner" onerror="this.onerror=null; this.src='IMG-20260828-WA025.jpg';">
   </div>
 
