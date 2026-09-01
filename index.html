@@ -7,20 +7,22 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
     
-    /* 1. மிக மேலே உள்ள கை கோர்த்த படம் (Logo.png) */
-    .top-cover-container {
+    /* 1. ஹெடர் மற்றும் பேனர் பகுதி */
+    .header-banner {
       width: 100%;
-      background-color: #0d5c63;
+      background-color: #ffffff;
       text-align: center;
-      margin: 0;
-      padding: 0;
+      margin: 0 auto;
     }
-    .top-cover-image {
+    .header-banner img {
       width: 100%;
-      max-height: 420px;
-      object-fit: cover;
+      max-width: 1000px;
+      height: auto;
       display: block;
+      margin: 0 auto;
     }
+
+    /* 2. தலைப்பு மற்றும் வரிகள் (நடுப்பகுதி) */
     .hero-title-box {
       background-color: #0d5c63;
       color: white;
@@ -28,16 +30,12 @@
       text-align: center;
     }
     .hero-title-box h1 { margin: 0; font-size: 19px; font-weight: bold; text-align: center; }
-    .hero-title-box p { margin: 6px 0 0; font-size: 13.5px; color: #b2dfdb; text-align: center; }
+    .hero-title-box p { margin: 6px 0 0; font-size: 14px; color: #b2dfdb; text-align: center; font-weight: bold; }
 
-    /* 2. மெனு பட்டை (Navigation Bar) */
+    /* 3. மெனு பட்டை */
     nav { background-color: #083c42; padding: 12px 0; text-align: center; }
     nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 14.5px; display: inline-block; padding: 4px 8px; }
     nav a:hover { color: #80cbc4; }
-
-    /* 3. தலைவர்/தொலைபேசி எண் கொண்ட பேனர் */
-    .banner-section { text-align: center; margin: 0 auto; background-color: #fff; }
-    .banner-section img { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 
     /* 4. முதன்மை உள்ளடக்கம் */
     .content-box {
@@ -63,16 +61,18 @@
 </head>
 <body>
 
-  <!-- 1. டாப் கை கோர்த்த படம் (Logo.png) -->
-  <div class="top-cover-container">
-    <img src="logo.png" alt="TNFSWOV Volunteers" class="top-cover-image">
-    <div class="hero-title-box">
-      <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
-      <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
-    </div>
+  <!-- 1. டாப் இமேஜ் (கை கோர்த்த படம் / மெயின் பேனர்) -->
+  <div class="header-banner">
+    <img src="logo.png" alt="TNFSWOV Logo" onerror="this.onerror=null; this.src='Logo.jpg'; if(!this.src) this.src='IMG-20260828-WA0250.jpg';">
   </div>
 
-  <!-- 2. மெனு பட்டை (Navigation Bar) -->
+  <!-- 2. தலைப்பு மற்றும் நடுவில் அமைந்த வரியுடன் கூடிய பகுதி -->
+  <div class="hero-title-box">
+    <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
+    <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
+  </div>
+
+  <!-- 3. மெனு பட்டை -->
   <nav>
     <a href="#about-us">எங்களைப் பற்றி</a>
     <a href="management.html">நிர்வாகம்</a>
@@ -80,12 +80,12 @@
     <a href="contact.html">தொடர்புகொள்ள</a>
   </nav>
 
-  <!-- 3. தலைவர்/தொலைபேசி எண் கொண்ட பேனர் -->
-  <div class="banner-section">
-    <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Banner" onerror="this.onerror=null; this.src='IMG-20260828-WA025.jpg';">
+  <!-- 4. அசல் தலைவரின் விவரம் கொண்ட பேனர் -->
+  <div class="header-banner">
+    <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Leader Banner" onerror="this.onerror=null; this.src='IMG-20260828-WA025.jpg';">
   </div>
 
-  <!-- 4. தகவல்கள் பகுதி -->
+  <!-- 5. தகவல்கள் பகுதி -->
   <div class="content-box" id="about-us">
     <p class="intro">அன்பான உறவுகளே....!</p>
     <p>
