@@ -3,23 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TNFSWOV - தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
+  <title>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    nav { background-color: #0056b3; padding: 15px; text-align: center; }
-    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 16px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+    
+    /* Top Hero Section */
+    .hero-container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .hero-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 77, 77, 0.85);
+      width: 100%;
+      padding: 15px 0;
+    }
+    .hero-text h1 { margin: 0; font-size: 20px; font-weight: bold; color: #fff; }
+    .hero-text p { margin: 5px 0 0; font-size: 13px; color: #e0e0e0; }
+
+    /* Navigation Bar */
+    nav { background-color: #004d4d; padding: 12px 0; text-align: center; }
+    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 15px; }
     nav a:hover { text-decoration: underline; }
-    .container { max-width: 900px; margin: 20px auto; padding: 20px; }
-    h2 { color: #0056b3; }
-    h3 { color: #28a745; margin-top: 25px; }
-    ul { line-height: 1.8; }
-    .motto-box { text-align: center; font-size: 1.2em; color: #d9534f; margin: 30px 0; font-weight: bold; }
-    .contact-info { background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #0056b3; margin-top: 30px; }
+
+    /* Middle Banner */
+    .banner-container { text-align: center; margin: 10px 0; }
+    .banner-image { width: 100%; max-width: 900px; height: auto; }
+
+    /* Main Content Area */
+    .content-box {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+    }
+    
+    h2 { color: #004d4d; font-size: 18px; border-bottom: 2px solid #004d4d; padding-bottom: 5px; margin-top: 25px; }
+    .intro { color: #004d4d; font-weight: bold; font-size: 16px; }
+    p { line-height: 1.7; font-size: 14.5px; text-align: justify; }
+    
+    ul { list-style: none; padding-left: 0; line-height: 2; font-size: 14.5px; }
+    ul li { margin-bottom: 5px; }
+
+    .motto-box { text-align: center; font-weight: bold; color: #d9534f; margin: 30px 0; font-size: 16px; }
+    
+    .footer-contact { background: #f9f9f9; padding: 15px; border-top: 2px solid #004d4d; margin-top: 20px; font-size: 14px; }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Menu -->
+  <!-- 1. Top Hero Section with Background Image -->
+  <div class="hero-container">
+    <img src="Cover.jpg" alt="TNFSWOV" class="hero-image">
+    <div class="hero-text">
+      <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
+      <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
+    </div>
+  </div>
+
+  <!-- 2. Navigation Bar -->
   <nav>
     <a href="#about-us">எங்களைப் பற்றி</a>
     <a href="management.html">நிர்வாகம்</a>
@@ -27,68 +82,62 @@
     <a href="contact.html">தொடர்புகொள்ள</a>
   </nav>
 
-  <!-- எங்களைப் பற்றி (Content Area) -->
-  <section id="about-us">
-    <div class="container">
-      <h2>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h2>
-      
-      <p><strong>அன்பான உறவுகளே....!</strong></p>
-      <p>சமூக நலனுக்காக அர்ப்பணிப்புடன் செயல்பட்டு வரும் அறக்கட்டளைகள், சமூக நல அமைப்புகள், தன்னார்வ அமைப்புகள், முதியோர் இல்லங்கள், குழந்தைகள் இல்லங்கள், மாற்றுத்திறனாளிகள் நல அமைப்புகள், கல்வி மற்றும் மருத்துவ சேவை அமைப்புகள், சுற்றுச்சூழல் அமைப்புகள், இரத்ததான அமைப்புகள் மற்றும் தனிப்பட்ட சமூக ஆர்வலர்கள் ஆகிய அனைவரையும் ஒரே குடையின் கீழ் ஒருங்கிணைக்கும் உயரிய நோக்கத்துடன் தமிழ்நாடு சமூகநல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு உருவாக்கப்படுகிறது.</p>
+  <!-- 3. Header Banner Image -->
+  <div class="banner-container">
+    <img src="IMG-20260828-WA025...jpg" alt="Banner" class="banner-image" onerror="this.style.display='none'">
+  </div>
 
-      <hr>
+  <!-- 4. Content Section -->
+  <div class="content-box" id="about-us">
+    <p class="intro">அன்பான உறவுகளே....!</p>
+    <p>
+      சமூக நலனுக்காக அர்ப்பணிப்புடன் செயல்பட்டு வரும் அறக்கட்டளைகள், சமூக நல அமைப்புகள், தன்னார்வ அமைப்புகள், முதியோர் இல்லங்கள், குழந்தைகள் இல்லங்கள், மாற்றுத்திறனாளிகள் நல அமைப்புகள், கல்வி மற்றும் மருத்துவ சேவை அமைப்புகள், சுற்றுச்சூழல் அமைப்புகள், இரத்ததான அமைப்புகள் மற்றும் தனிப்பட்ட சமூக ஆர்வலர்கள் ஆகிய அனைவரையும் ஒரே குடையின் கீழ் ஒருங்கிணைக்கும் உயரிய நோக்கத்துடன் <strong>தமிழ்நாடு சமூகநல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</strong> உருவாக்கப்படுகிறது.
+    </p>
 
-      <h3>எங்கள் முக்கிய நோக்கங்கள்:</h3>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>✅ சமூக சேவை அமைப்புகளை ஒருங்கிணைத்தல்.</li>
-        <li>✅ சமூக ஆர்வலர்களுக்கு தேசிய, மாநில அளவிலான அடையாளம் உருவாக்குதல்.</li>
-        <li>✅ சேவை அமைப்புகளுக்கிடையே ஒற்றுமை மற்றும் ஒத்துழைப்பை வளர்த்தல்.</li>
-        <li>✅ கல்வி, மருத்துவம், சுற்றுச்சூழல், பேரிடர் நிவாரணம், மனிதநேய சேவைகளை ஒருங்கிணைத்தல்.</li>
-        <li>✅ கருத்தரங்குகள், பயிற்சிகள் மற்றும் விழிப்புணர்வு நிகழ்ச்சிகள் நடத்துதல்.</li>
-        <li>✅ சிறந்த சமூக சேவையாளர்கள் மற்றும் அமைப்புகளை விருதுகள் வழங்கி கௌரவித்தல்.</li>
-        <li>✅ அரசு மற்றும் சமூக அமைப்புகளுக்கு இடையே ஆக்கப்பூர்வமான பாலமாக செயல்படுதல்.</li>
-      </ul>
+    <h2>எங்கள் முக்கிய நோக்கங்கள்:</h2>
+    <ul>
+      <li>✅ சமூக சேவை அமைப்புகளை ஒருங்கிணைத்தல்.</li>
+      <li>✅ சமூக ஆர்வலர்களுக்கு தேசிய, மாநில அளவிலான அடையாளம் உருவாக்குதல்.</li>
+      <li>✅ சேவை அமைப்புகளுக்கிடையே ஒற்றுமை மற்றும் ஒத்துழைப்பை வளர்த்தல்.</li>
+      <li>✅ கல்வி, மருத்துவம், சுற்றுச்சூழல், பேரிடர் நிவாரணம், மனிதநேய சேவைகளை ஒருங்கிணைத்தல்.</li>
+      <li>✅ கருத்தரங்குகள், பயிற்சிகள் மற்றும் விழிப்புணர்வு நிகழ்ச்சிகள் நடத்துதல்.</li>
+      <li>✅ சிறந்த சமூக சேவையாளர்கள் மற்றும் அமைப்புகளை விருதுகள் வழங்கி கௌரவித்தல்.</li>
+      <li>✅ அரசு மற்றும் சமூக அமைப்புகளுக்கு இடையே ஆக்கப்பூர்வமான பாலமாக செயல்படுதல்.</li>
+    </ul>
 
-      <hr>
+    <h2>யார் உறுப்பினராக இணையலாம்?</h2>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>பதிவு செய்யப்பட்ட அறக்கட்டளைகள்</li>
+      <li>சமூக நல அமைப்புகள்</li>
+      <li>தன்னார்வ அமைப்புகள் (NGOs)</li>
+      <li>முதியோர் இல்லங்கள் & குழந்தைகள் இல்லங்கள்</li>
+      <li>மாற்றுத்திறனாளிகள் நல அமைப்புகள்</li>
+      <li>இளைஞர் மற்றும் மகளிர் அமைப்புகள்</li>
+      <li>தனிப்பட்ட சமூக ஆர்வலர்கள் & சமூக சேவையில் ஆர்வமுள்ள பொதுமக்கள்</li>
+    </ul>
 
-      <h3>யார் உறுப்பினராக இணையலாம்?</h3>
-      <ul>
-        <li>பதிவு செய்யப்பட்ட அறக்கட்டளைகள்</li>
-        <li>சமூக நல அமைப்புகள்</li>
-        <li>தன்னார்வ அமைப்புகள் (NGOs)</li>
-        <li>முதியோர் இல்லங்கள் & குழந்தைகள் இல்லங்கள்</li>
-        <li>மாற்றுத்திறனாளிகள் நல அமைப்புகள்</li>
-        <li>இளைஞர் மற்றும் மகளிர் அமைப்புகள்</li>
-        <li>தனிப்பட்ட சமூக ஆர்வலர்கள் & சமூக சேவையில் ஆர்வமுள்ள பொதுமக்கள்</li>
-      </ul>
+    <h2>உறுப்பினர்களுக்கு கிடைக்கும் வாய்ப்புகள்:</h2>
+    <ul>
+      <li>🌟 தேசிய மற்றும் மாநில அளவிலான ஒருங்கிணைப்பு</li>
+      <li>🌟 அனுபவப் பகிர்வு மற்றும் பயிற்சிகள்</li>
+      <li>🌟 சமூக சேவைத் திட்டங்களில் பங்கேற்பு</li>
+      <li>🌟 மாநிலங்களுக்கு இடையேயான இணைப்பு</li>
+      <li>🌟 அங்கீகாரம் மற்றும் கௌரவம்</li>
+      <li>🌟 சமூக நலத் திட்டங்கள் குறித்த தகவல்கள் மற்றும் ஒத்துழைப்பு</li>
+    </ul>
 
-      <hr>
-
-      <h3>உறுப்பினர்களுக்கு கிடைக்கும் வாய்ப்புகள்:</h3>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>🌟 தேசிய மற்றும் மாநில அளவிலான ஒருங்கிணைப்பு</li>
-        <li>🌟 அனுபவப் பகிர்வு மற்றும் பயிற்சிகள்</li>
-        <li>🌟 சமூக சேவைத் திட்டங்களில் பங்கேற்பு</li>
-        <li>🌟 மாநிலங்களுக்கு இடையேயான இணைப்பு</li>
-        <li>🌟 அங்கீகாரம் மற்றும் கௌரவம்</li>
-        <li>🌟 சமூக நலத் திட்டங்கள் குறித்த தகவல்கள் மற்றும் ஒத்துழைப்பு</li>
-      </ul>
-
-      <hr>
-
-      <div class="motto-box">
-        "சேவையில் ஒற்றுமை – சமூகத்தில் முன்னேற்றம்"
-      </div>
-
-      <div class="contact-info">
-        <h4>Dr. K. முஹம்மது யஹ்யா</h4>
-        <p><strong>நிறுவனர் & மாநிலத் தலைவர்</strong><br>
-        தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</p>
-        <p><strong>செல்:</strong> 90475 25222 / 99940 50550</p>
-        <p><strong>தலைமை அலுவலகம்:</strong><br>
-        24/4, பெரிய தெரு, பட்டுக்கோட்டை – 614601, தஞ்சாவூர் மாவட்டம், தமிழ்நாடு.</p>
-      </div>
+    <div class="motto-box">
+      "சேவையில் ஒற்றுமை – சமூகத்தில் முன்னேற்றம்"
     </div>
-  </section>
+
+    <div class="footer-contact">
+      <strong>Dr. K. முஹம்மது யஹ்யா</strong><br>
+      நிறுவனர் & மாநிலத் தலைவர்,<br>
+      தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)<br><br>
+      <strong>செல்:</strong> 90475 25222 / 99940 50550<br>
+      <strong>தலைமை அலுவலகம்:</strong> 24/4, பெரிய தெரு, பட்டுக்கோட்டை – 614601, தஞ்சாவூர் மாவட்டம், தமிழ்நாடு.
+    </div>
+  </div>
 
 </body>
 </html>
