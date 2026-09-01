@@ -5,76 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
     
-    /* Top Hero Section */
-    .hero-container {
+    /* Top Hero Banner (கை கோர்த்த படம்) */
+    .hero-section {
       position: relative;
-      text-align: center;
-      color: white;
-    }
-    .hero-image {
       width: 100%;
-      height: auto;
-      max-height: 400px;
+      background-color: #0d5c63;
+      text-align: center;
+    }
+    .hero-section img {
+      width: 100%;
+      max-height: 380px;
       object-fit: cover;
       display: block;
     }
-    .hero-text {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 77, 77, 0.85);
-      width: 100%;
-      padding: 15px 0;
+    .hero-title-box {
+      background-color: #0d5c63;
+      color: white;
+      padding: 12px 10px;
+      text-align: center;
     }
-    .hero-text h1 { margin: 0; font-size: 20px; font-weight: bold; color: #fff; }
-    .hero-text p { margin: 5px 0 0; font-size: 13px; color: #e0e0e0; }
+    .hero-title-box h1 { margin: 0; font-size: 18px; font-weight: bold; }
+    .hero-title-box p { margin: 4px 0 0; font-size: 12px; color: #b2dfdb; }
 
     /* Navigation Bar */
-    nav { background-color: #004d4d; padding: 12px 0; text-align: center; }
-    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
+    nav { background-color: #083c42; padding: 10px 0; text-align: center; }
+    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 12px; font-size: 14px; display: inline-block; padding: 5px; }
+    nav a:hover { color: #80cbc4; }
 
-    /* Middle Banner */
-    .banner-container { text-align: center; margin: 10px 0; }
-    .banner-image { width: 100%; max-width: 900px; height: auto; }
+    /* Middle Official Banner (பேனர் படம்) */
+    .banner-section { text-align: center; margin: 10px 0; }
+    .banner-section img { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 
-    /* Main Content Area */
+    /* Main Content */
     .content-box {
       max-width: 900px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 25px;
-      border: 1px solid #ddd;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+      margin: 15px auto;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
     }
     
-    h2 { color: #004d4d; font-size: 18px; border-bottom: 2px solid #004d4d; padding-bottom: 5px; margin-top: 25px; }
-    .intro { color: #004d4d; font-weight: bold; font-size: 16px; }
-    p { line-height: 1.7; font-size: 14.5px; text-align: justify; }
+    h2 { color: #0d5c63; font-size: 16px; border-bottom: 2px solid #0d5c63; padding-bottom: 5px; margin-top: 20px; }
+    .intro { color: #0d5c63; font-weight: bold; font-size: 15px; }
+    p { line-height: 1.6; font-size: 14px; text-align: justify; }
     
-    ul { list-style: none; padding-left: 0; line-height: 2; font-size: 14.5px; }
-    ul li { margin-bottom: 5px; }
+    ul { list-style: none; padding-left: 0; line-height: 1.8; font-size: 14px; }
+    ul li { margin-bottom: 6px; }
 
-    .motto-box { text-align: center; font-weight: bold; color: #d9534f; margin: 30px 0; font-size: 16px; }
+    .motto-box { text-align: center; font-weight: bold; color: #d9534f; margin: 25px 0; font-size: 15px; }
     
-    .footer-contact { background: #f9f9f9; padding: 15px; border-top: 2px solid #004d4d; margin-top: 20px; font-size: 14px; }
+    .footer-contact { background: #f1f8f6; padding: 15px; border-left: 4px solid #0d5c63; margin-top: 20px; font-size: 13.5px; }
   </style>
 </head>
 <body>
 
-  <!-- 1. Top Hero Section with Background Image -->
-  <div class="hero-container">
-    <img src="Cover.jpg" alt="TNFSWOV" class="hero-image">
-    <div class="hero-text">
+  <!-- 1. கை கோர்த்த படம் (Hero Image) -->
+  <div class="hero-section">
+    <img src="Cover.jpg" alt="TNFSWOV Volunteers">
+    <div class="hero-title-box">
       <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
       <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
     </div>
   </div>
 
-  <!-- 2. Navigation Bar -->
+  <!-- 2. மெனு பட்டை (Navigation Bar) -->
   <nav>
     <a href="#about-us">எங்களைப் பற்றி</a>
     <a href="management.html">நிர்வாகம்</a>
@@ -82,12 +79,12 @@
     <a href="contact.html">தொடர்புகொள்ள</a>
   </nav>
 
-  <!-- 3. Header Banner Image -->
-  <div class="banner-container">
-    <img src="IMG-20260828-WA025...jpg" alt="Banner" class="banner-image" onerror="this.style.display='none'">
+  <!-- 3. பெயர் மற்றும் தொலைபேசி எண் கொண்ட பேனர் (Official Header Banner) -->
+  <div class="banner-section">
+    <img src="IMG-20260828-WA0250.jpg" alt="TNFSWOV Banner" onerror="this.src='IMG-20260828-WA025.jpg'">
   </div>
 
-  <!-- 4. Content Section -->
+  <!-- 4. பதிவுகள் மற்றும் தகவல்கள் -->
   <div class="content-box" id="about-us">
     <p class="intro">அன்பான உறவுகளே....!</p>
     <p>
