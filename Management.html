@@ -38,7 +38,6 @@
     box-sizing: border-box;
   }
 
-  /* பதவிகளுக்கான தனித்துவமான வண்ணங்கள் */
   .president { border-top: 6px solid #d9534f; background-color: #fff5f5; width: 60%; }
   .vice-president { border-top: 6px solid #f0ad4e; background-color: #fffdf5; }
   .gen-secretary { border-top: 6px solid #0275d8; background-color: #f0f8ff; width: 65%; }
@@ -46,7 +45,7 @@
   .secretaries { border-top: 6px solid #5bc0de; background-color: #f0ffff; }
   .executive-members { border-top: 6px solid #6c757d; background-color: #f8f9fa; }
   .wing-heads { border-top: 6px solid #8e44ad; background-color: #fcf4ff; }
-  .district-section { border-top: 6px solid #2c3e50; background-color: #ffffff; width: 100%; max-width: 1000px; }
+  .district-section { border-top: 6px solid #2c3e50; background-color: #ffffff; width: 100%; max-width: 1100px; }
 
   h2 {
     margin: 0 0 12px 0;
@@ -56,36 +55,63 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
     margin-top: 10px;
   }
 
   .grid-item {
     background: #ffffff;
-    padding: 10px;
+    padding: 12px 10px;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: #333;
-    line-height: 1.4;
+    line-height: 1.5;
+  }
+
+  .role-title {
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .person-name {
+    color: #475569;
   }
 
   .district-card {
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
-    padding: 12px;
-    text-align: left;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .district-title {
     font-weight: bold;
-    color: #1e293b;
+    color: #0f172a;
     border-bottom: 2px solid #94a3b8;
-    padding-bottom: 5px;
-    margin-bottom: 8px;
-    font-size: 1.05rem;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .district-roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+  }
+
+  .district-role-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px;
     text-align: center;
   }
 
@@ -105,7 +131,7 @@
   <!-- நிறுவனர் & மாநில தலைவர் -->
   <div class="level-card president">
     <h2>நிறுவனர் & மாநில தலைவர்</h2>
-    <div style="font-size: 1.1rem; font-weight: bold; color: #b91c1c;">Dr.K.முஹம்மது யஹ்யா</div>
+    <div style="font-size: 1.1rem; font-weight: bold; color: #b91c1c;">முஹம்மது யஹ்யா</div>
   </div>
 
   <div class="arrow">↓</div>
@@ -114,9 +140,9 @@
   <div class="level-card vice-president">
     <h2>மாநில துணைத் தலைவர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">திரு.R.சாக்யா பிரபு M.Com.,B.Ed., M.Phil.</div>
-      <div class="grid-item">திரு.M.E.அமோஸ்</div>
-      <div class="grid-item">திரு.A.பஸ்லுல் ரஹ்மான் BA.</div>
+      <div class="grid-item"><span class="person-name">திரு.R.சாக்யா பிரபு M.Com.,B.Ed., M.Phil.</span></div>
+      <div class="grid-item"><span class="person-name">திரு.M.E.அமோஸ்</span></div>
+      <div class="grid-item"><span class="person-name">திரு.A.பஸ்லுல் ரஹ்மான் BA.</span></div>
     </div>
   </div>
 
@@ -125,7 +151,7 @@
   <!-- மாநில பொது செயலாளர் -->
   <div class="level-card gen-secretary">
     <h2>மாநில பொது செயலாளர்</h2>
-    <div style="font-weight: bold;">திரு.N.கோபி MA.,M.Phil.,MBA.,M.Phil.</div>
+    <div style="font-weight: bold;" class="person-name">திரு.N.கோபி MA.,M.Phil.,MBA.,M.Phil.</div>
   </div>
 
   <div class="arrow">↓</div>
@@ -133,7 +159,7 @@
   <!-- மாநில பொருளாளர் -->
   <div class="level-card treasurer">
     <h2>மாநில பொருளாளர்</h2>
-    <div style="font-weight: bold;">M.மகாலெட்சமி B.Sc.</div>
+    <div style="font-weight: bold;" class="person-name">M.மகாலெட்சமி B.Sc.</div>
   </div>
 
   <div class="arrow">↓</div>
@@ -142,12 +168,12 @@
   <div class="level-card secretaries">
     <h2>மாநில செயலாளர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">திரு.P.முருகேசன் B.Sc.</div>
-      <div class="grid-item">திரு.J.நந்தகோபால்</div>
-      <div class="grid-item">திரு.M.முஸ்தபா நூராணி MSW</div>
-      <div class="grid-item">திரு.B.சௌகத் அலி பாபு</div>
-      <div class="grid-item">திரு.G.பிரகாஷ் DME</div>
-      <div class="grid-item">வழக்கறிஞர் திரு.இரா.சீனிவாசன் MA.,B.Ed.,LLB.</div>
+      <div class="grid-item"><span class="person-name">திரு.P.முருகேசன் B.Sc.</span></div>
+      <div class="grid-item"><span class="person-name">திரு.J.நந்தகோபால்</span></div>
+      <div class="grid-item"><span class="person-name">திரு.M.முஸ்தபா நூராணி MSW</span></div>
+      <div class="grid-item"><span class="person-name">திரு.B.சௌகத் அலி பாபு</span></div>
+      <div class="grid-item"><span class="person-name">திரு.G.பிரகாஷ் DME</span></div>
+      <div class="grid-item"><span class="person-name">வழக்கறிஞர் திரு.இரா.சீனிவாசன் MA.,B.Ed.,LLB.</span></div>
     </div>
   </div>
 
@@ -157,11 +183,11 @@
   <div class="level-card executive-members">
     <h2>மாநில செயற்குழு உறுப்பினர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">திரு.S.முகம்மது பைசுல் B.Com.</div>
-      <div class="grid-item">திரு.C.T.சேதுராம் D.Acu.</div>
-      <div class="grid-item">திரு.ஆ.கோமதி நாயகம்</div>
-      <div class="grid-item">திருமதி S.ஆரோக்கிய மேரி BA.,MSW</div>
-      <div class="grid-item">திரு. Dr.G.பாலசுப்பிரமணியம்</div>
+      <div class="grid-item"><span class="person-name">திரு.S.முகம்மது பைசுல் B.Com.</span></div>
+      <div class="grid-item"><span class="person-name">திரு.C.T.சேதுராம் D.Acu.</span></div>
+      <div class="grid-item"><span class="person-name">திரு.ஆ.கோமதி நாயகம்</span></div>
+      <div class="grid-item"><span class="person-name">திருமதி S.ஆரோக்கிய மேரி BA.,MSW</span></div>
+      <div class="grid-item"><span class="person-name">திரு. Dr.G.பாலசுப்பிரமணியம்</span></div>
     </div>
   </div>
 
@@ -171,20 +197,20 @@
   <div class="level-card wing-heads">
     <h2>மாநில அணி & பிரிவுப் பொறுப்பாளர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item"><b>மகளிர் அணி தலைவர்:</b><br>கி.சுபாஷினி M.A.,M.Phil.,B.Ed.</div>
-      <div class="grid-item"><b>மகளிர் அணி செயலாளர்:</b><br>S.ருக்மணி தேவி MA.,Lit.</div>
-      <div class="grid-item"><b>அயலக மண்டல ஒருங்கிணைப்பாளர்:</b><br>S.முஹம்மது இப்ராஹிம் முஸ்தபா BE.</div>
-      <div class="grid-item"><b>கல்வி மேம்பாட்டு ஆலோசகர்:</b><br>திருமதி.அன்னமேரி சாமிக்கண்ணு MA.,B.Ed.,M.Phil.</div>
-      <div class="grid-item"><b>கலை இலக்கிய பண்பாட்டு செயலாளர்:</b><br>திருமதி.பாண்டி மீனாள் ஏகாம்பரம்</div>
-      <div class="grid-item"><b>கல்வி வளர்ச்சிக் குழு செயலாளர்:</b><br>திரு.A.S.முஹம்மது அப்பாஸ் BE.,MBA.</div>
-      <div class="grid-item"><b>தொழிலாளர் நலப் பிரிவு தலைவர்:</b><br>திருமதி.நவமணி மூர்த்தி BA.</div>
-      <div class="grid-item"><b>தொழில் முனைவோர் பிரிவு தலைவர்:</b><br>திரு.A.முஹம்மது இப்ராஹிம்</div>
-      <div class="grid-item"><b>தொழில் முனைவோர் பிரிவு செயலாளர்:</b><br>திரு.கோபால் பழனிச்சாமி</div>
-      <div class="grid-item"><b>சமூக நீதி & மனித உரிமை தலைவர்:</b><br>திரு.ஜெகபர் அலி</div>
-      <div class="grid-item"><b>இரத்ததான சேவை பிரிவு செயலாளர்:</b><br>வழக்கறிஞர் திரு.G.வீரமணி MA.,LLB.</div>
-      <div class="grid-item"><b>சட்ட உரிமைகள் விழிப்புணர்வு செயலாளர்:</b><br>வழக்கறிஞர் கோமதி காளிமுத்து B.Sc.,MBA.,LLB.</div>
-      <div class="grid-item"><b>மாற்றுத்திறனாளிகள் நலப் பிரிவு தலைவர்:</b><br>திரு.B.அப்சல் பாஷா</div>
-      <div class="grid-item"><b>மாற்றுத்திறனாளிகள் நலப் பிரிவு செயலாளர்:</b><br>திரு.A.G.மணி சேலம்</div>
+      <div class="grid-item"><span class="role-title">மாநில மகளிர் அணி தலைவர்:</span><span class="person-name">கி.சுபாஷினி M.A.,M.Phil.,B.Ed.</span></div>
+      <div class="grid-item"><span class="role-title">மாநில மகளிர் அணி செயலாளர்:</span><span class="person-name">S.ருக்மணி தேவி MA.,Lit.</span></div>
+      <div class="grid-item"><span class="role-title">அயலக மண்டல ஒருங்கிணைப்பாளர்:</span><span class="person-name">S.முஹம்மது இப்ராஹிம் முஸ்தபா BE.</span></div>
+      <div class="grid-item"><span class="role-title">மாணவர் நலன் மற்றும் கல்வி மேம்பாட்டு ஆலோசகர்:</span><span class="person-name">திருமதி.அன்னமேரி சாமிக்கண்ணு MA.,B.Ed.,M.Phil.</span></div>
+      <div class="grid-item"><span class="role-title">கலை இலக்கிய பண்பாட்டு பிரிவு செயலாளர்:</span><span class="person-name">திருமதி.பாண்டி மீனாள் ஏகாம்பரம்</span></div>
+      <div class="grid-item"><span class="role-title">கல்வி வளர்ச்சிக் குழு மாநில செயலாளர்:</span><span class="person-name">திரு.A.S.முஹம்மது அப்பாஸ் BE.,MBA.</span></div>
+      <div class="grid-item"><span class="role-title">தொழிலாளர் நலப் பிரிவு தலைவர்:</span><span class="person-name">திருமதி.நவமணி மூர்த்தி BA.</span></div>
+      <div class="grid-item"><span class="role-title">தொழில் முனைவோர் பிரிவு தலைவர்:</span><span class="person-name">திரு.A.முஹம்மது இப்ராஹிம்</span></div>
+      <div class="grid-item"><span class="role-title">தொழில் முனைவோர் பிரிவு செயலாளர்:</span><span class="person-name">திரு.கோபால் பழனிச்சாமி</span></div>
+      <div class="grid-item"><span class="role-title">சமூக நீதி மற்றும் மனித உரிமை பிரிவு தலைவர்:</span><span class="person-name">திரு.ஜெகபர் அலி</span></div>
+      <div class="grid-item"><span class="role-title">இரத்ததான சேவை பிரிவு செயலாளர்:</span><span class="person-name">வழக்கறிஞர் திரு.G.வீரமணி MA.,LLB.</span></div>
+      <div class="grid-item"><span class="role-title">சட்ட உரிமைகள் விழிப்புணர்வு பிரிவு செயலாளர்:</span><span class="person-name">வழக்கறிஞர் கோமதி காளிமுத்து B.Sc.,MBA.,LLB.</span></div>
+      <div class="grid-item"><span class="role-title">மாற்றுத்திறனாளிகள் நலப் பிரிவு தலைவர்:</span><span class="person-name">திரு.B.அப்சல் பாஷா</span></div>
+      <div class="grid-item"><span class="role-title">மாற்றுத்திறனாளிகள் நலப் பிரிவு செயலாளர்:</span><span class="person-name">திரு.A.G.மணி சேலம்</span></div>
     </div>
   </div>
 
@@ -193,166 +219,226 @@
   <!-- மாவட்ட கட்டமைப்பு நிர்வாகிகள் -->
   <div class="level-card district-section">
     <h2>மாவட்ட கட்டமைப்பு நிர்வாகிகள்</h2>
-    <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
 
+      <!-- கன்னியாகுமரி -->
       <div class="district-card">
         <div class="district-title">கன்னியாகுமரி மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.Dr A.P. அருள்குமரேசன் MBA,(HM),M.Sc.,MS(coun).,MSW.,MA(JMC),PhD<br>
-        <b>செயலாளர்:</b> திருமதி K.செல்வம் நடராஜன் MA.<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி S. ஜெயா ஸ்ரீதரன் BA.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.Dr A.P. அருள்குமரேசன் MBA,(HM),M.Sc.,MS(coun).,MSW.,MA(JMC),PhD</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திருமதி K.செல்வம் நடராஜன் MA.</span></div>
+          <div class="district-role-box"><span class="role-title">மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி S. ஜெயா ஸ்ரீதரன் BA.</span></div>
+        </div>
       </div>
 
+      <!-- திருவண்ணாமலை -->
       <div class="district-card">
         <div class="district-title">திருவண்ணாமலை மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.முனியாண்டி MA.,B.Ed.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டத் தலைவர்</span><span class="person-name">திரு.முனியாண்டி MA.,B.Ed.</span></div>
+        </div>
       </div>
 
+      <!-- வேலூர் -->
       <div class="district-card">
         <div class="district-title">வேலூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> திருமதி.D. ராதா ஜெயலெட்சுமி<br>
-        <b>மாற்றுத்திறனாளிகள் நலத் தலைவர்:</b> திரு.F.M. ஜாபர் அப்துல்லா<br>
-        <b>மாற்றுத்திறனாளிகள் நலப் பொருளாளர்:</b> திரு.R. பிரசாத் பாபு
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டத் தலைவர்</span><span class="person-name">திருமதி.D. ராதா ஜெயலெட்சுமி</span></div>
+          <div class="district-role-box"><span class="role-title">மாற்றுத்திறனாளிகள் நலப் பிரிவு தலைவர்</span><span class="person-name">திரு.F.M. ஜாபர் அப்துல்லா</span></div>
+          <div class="district-role-box"><span class="role-title">மாற்றுத்திறனாளிகள் நலப் பிரிவு பொருளாளர்</span><span class="person-name">திரு.R. பிரசாத் பாபு</span></div>
+        </div>
       </div>
 
+      <!-- செங்கல்பட்டு -->
       <div class="district-card">
         <div class="district-title">செங்கல்பட்டு மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.S.இசையமுதன் BE.<br>
-        <b>துணைத் தலைவர்:</b> திருமதி. நந்தினி சேகர் D.Nur.,M.Sc.<br>
-        <b>செயலாளர்:</b> திருமதி P.வள்ளி
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டத் தலைவர்</span><span class="person-name">திரு.S.இசையமுதன் BE.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்டத் துணைத் தலைவர்</span><span class="person-name">திருமதி. நந்தினி சேகர் D.Nur.,M.Sc.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திருமதி P.வள்ளி</span></div>
+        </div>
       </div>
 
+      <!-- திருவாரூர் -->
       <div class="district-card">
         <div class="district-title">திருவாரூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> திருமதி.கலா சந்திரசேகரன்<br>
-        <b>துணைத் தலைவர்:</b> திரு.S.J. ஹசன் குத்துஸ்<br>
-        <b>செயலாளர்:</b> திருமதி. இரா.ஜெ.பாத்திமா அஸ்மா<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி.தீபா வரதராஜன் MSW
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திருமதி.கலா சந்திரசேகரன்</span></div>
+          <div class="district-role-box"><span class="role-title">துணைத் தலைவர்</span><span class="person-name">திரு.S.J. ஹசன் குத்துஸ்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திருமதி. இரா.ஜெ.பாத்திமா அஸ்மா</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி.தீபா வரதராஜன் MSW</span></div>
+        </div>
       </div>
 
+      <!-- கள்ளக்குறிச்சி -->
       <div class="district-card">
         <div class="district-title">கள்ளக்குறிச்சி மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.A. ஷேக் சலாவுதீன்<br>
-        <b>துணை தலைவர்:</b> திரு.M. அஜித் குமார் B.Sc.,B.Ed.<br>
-        <b>செயலாளர்:</b> திரு.மாயகிருஷ்ணன்<br>
-        <b>துணைச் செயலாளர்:</b> திரு.விமல் இளவரசன் BA.,LLB.<br>
-        <b>பொருளாளர்:</b> திரு.ஷாகுல் MBA.<br>
-        <b>செயற்குழு உறுப்பினர்கள்:</b><br>
-        1. திரு.பாதுஷா ஜாகிர் உசேன் MBA<br>
-        2. திரு.சாமுவேல் செல்லதுரை MBA.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.A. ஷேக் சலாவுதீன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணை தலைவர்</span><span class="person-name">திரு.M. அஜித் குமார் B.Sc.,B.Ed.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்டச் செயலாளர்</span><span class="person-name">திரு.மாயகிருஷ்ணன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைச் செயலாளர்</span><span class="person-name">திரு.விமல் இளவரசன் BA.,LLB.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட பொருளாளர்</span><span class="person-name">திரு.ஷாகுல் MBA.</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 1</span><span class="person-name">திரு.பாதுஷா ஜாகிர் உசேன் MBA</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 2</span><span class="person-name">திரு.சாமுவேல் செல்லதுரை MBA.</span></div>
+        </div>
       </div>
 
+      <!-- புதுக்கோட்டை -->
       <div class="district-card">
         <div class="district-title">புதுக்கோட்டை மாவட்டம்</div>
-        <b>தலைவர்:</b> முனைவர் திருமதி.K.தமிழ்செல்வி Phd.<br>
-        <b>துணைத்தலைவர்:</b> திரு.S.சிங்காரம்<br>
-        <b>செயலாளர்:</b> திரு.M.சிராஜுதீன்<br>
-        <b>துணைசெயலாளர்:</b> திரு.S.A.மருதராஜ்<br>
-        <b>தொழிலாளர் நலப் பிரிவு தலைவர்:</b> திரு.P.நாகமுத்து BA.<br>
-        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு.R.பிரசன்னா M.Tech.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">முனைவர் திருமதி.K.தமிழ்செல்வி Phd.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைத்தலைவர்</span><span class="person-name">திரு.S.சிங்காரம்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.M.சிராஜுதீன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைசெயலாளர்</span><span class="person-name">திரு.S.A.மருதராஜ்</span></div>
+          <div class="district-role-box"><span class="role-title">தொழிலாளர் நலப் பிரிவு தலைவர்</span><span class="person-name">திரு.P.நாகமுத்து BA.</span></div>
+          <div class="district-role-box"><span class="role-title">தொழில் முனைவோர் நலப் பிரிவு தலைவர்</span><span class="person-name">திரு.R.பிரசன்னா M.Tech.</span></div>
+        </div>
       </div>
 
+      <!-- தஞ்சாவூர் -->
       <div class="district-card">
         <div class="district-title">தஞ்சாவூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> வழக்கறிஞர் திரு.Dr.G.சித்திரவேலு MA.,M.Phil.,LLB<br>
-        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு. I. முஹம்மது ரியாஸ்
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டத் தலைவர்</span><span class="person-name">வழக்கறிஞர் திரு.Dr.G.சித்திரவேலு MA.,M.Phil.,LLB</span></div>
+          <div class="district-role-box"><span class="role-title">தொழில் முனைவோர் நலப் பிரிவு தலைவர்</span><span class="person-name">திரு. I. முஹம்மது ரியாஸ்</span></div>
+        </div>
       </div>
 
+      <!-- தென்காசி -->
       <div class="district-card">
         <div class="district-title">தென்காசி மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.ஹக்கீம்<br>
-        <b>துணைத் தலைவர்:</b> திரு.ராமசாமி பரமசிவம் DCE<br>
-        <b>செயலாளர்:</b> திரு.சுரண்டை செல்வன்<br>
-        <b>மகளிர் அணி தலைவர்:</b> M.J. திருமதி சகிலா பானு முஹம்மது சாகுல் ஹமீது
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.ஹக்கீம்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைத் தலைவர்</span><span class="person-name">திரு.ராமசாமி பரமசிவம் DCE</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.சுரண்டை செல்வன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">M.J. திருமதி சகிலா பானு முஹம்மது சாகுல் ஹமீது</span></div>
+        </div>
       </div>
 
+      <!-- திண்டுக்கல் -->
       <div class="district-card">
         <div class="district-title">திண்டுக்கல் மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு A.அஷ்ரப் அலி<br>
-        <b>செயலாளர்:</b> திரு.C வீராசாமி<br>
-        <b>துணைச் செயலாளர்:</b> திரு.M. நேரு<br>
-        <b>ரத்த சேவை பிரிவு தலைவர்:</b> திரு M.லோகநாதன்<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி. வள்ளி
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு A.அஷ்ரப் அலி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.C வீராசாமி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைச் செயலாளர்</span><span class="person-name">திரு.M. நேரு</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட ரத்த சேவை பிரிவு தலைவர்</span><span class="person-name">திரு M.லோகநாதன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி. வள்ளி</span></div>
+        </div>
       </div>
 
+      <!-- கடலூர் -->
       <div class="district-card">
         <div class="district-title">கடலூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.சசிகுமார் MCA<br>
-        <b>செயலாளர்:</b> திரு.G K. சிலம்பரசன் MA.,B.Ed.,CLP
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டத் தலைவர்</span><span class="person-name">திரு.சசிகுமார் MCA</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.G K. சிலம்பரசன் MA.,B.Ed.,CLP</span></div>
+        </div>
       </div>
 
+      <!-- கோயம்புத்தூர் -->
       <div class="district-card">
         <div class="district-title">கோயம்புத்தூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.ரவி சாமிதாஸ் BL<br>
-        <b>செயலாளர்:</b> திரு.N. விவேகானந்தன் B.Sc.<br>
-        <b>துணைச் செயலாளர்:</b> திருமதி.நா. விக்னேஷ்வரி<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி. நிஷா மூர்த்தி<br>
-        <b>மகளிர் அணி துணைத்தலைவர்:</b> திருமதி.ஷோபா BBA.<br>
-        <b>மகளிர் அணி செயலாளர்:</b> திருமதி.A. மேரி இமாகுலேட்<br>
-        <b>பொருளாளர்:</b> திருமதி.S.மைதிலி MBA<br>
-        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> M.பிரதிக்ஷா B.Sc.,IT<br>
-        <b>செயற்குழு உறுப்பினர்கள்:</b><br>
-        1. திரு. M. செந்தில் குமார்<br>
-        2. திருமதி உண்ணாமலை சிவகுமார்
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.ரவி சாமிதாஸ் BL</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.N. விவேகானந்தன் B.Sc.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைச் செயலாளர்</span><span class="person-name">திருமதி.நா. விக்னேஷ்வரி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி. நிஷா மூர்த்தி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி துணைத்தலைவர்</span><span class="person-name">திருமதி.ஷோபா BBA.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி செயலாளர்</span><span class="person-name">திருமதி.A. மேரி இமாகுலேட்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட பொருளாளர்</span><span class="person-name">திருமதி.S.மைதிலி MBA</span></div>
+          <div class="district-role-box"><span class="role-title">கல்வி மேம்பாட்டு ஆலோசகர்</span><span class="person-name">M.பிரதிக்ஷா B.Sc.,IT</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 1</span><span class="person-name">திரு. M. செந்தில் குமார்</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 2</span><span class="person-name">திருமதி உண்ணாமலை சிவகுமார்</span></div>
+        </div>
       </div>
 
+      <!-- திருப்பூர் -->
       <div class="district-card">
         <div class="district-title">திருப்பூர் மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.M. மலர்மன்னன்<br>
-        <b>துணை தலைவர்:</b> திரு. V.G.வெங்கடுசாமி B.Sc.,B.lit.,D.Ted.<br>
-        <b>செயலாளர்:</b> திரு. உஷா மூர்த்தி<br>
-        <b>துணைச் செயலாளர்:</b> திரு.M. பார்த்திபன் B.Com.<br>
-        <b>பொருளாளர்:</b> திரு.S.தனபால்<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி.பானுமதி சரவணகுமார்
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.M. மலர்மன்னன்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணை தலைவர்</span><span class="person-name">திரு. V.G.வெங்கடுசாமி B.Sc.,B.lit.,D.Ted.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு. உஷா மூர்த்தி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணைச் செயலாளர்</span><span class="person-name">திரு.M. பார்த்திபன் B.Com.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட பொருளாளர்</span><span class="person-name">திரு.S.தனபால்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி.பானுமதி சரவணகுமார்</span></div>
+        </div>
       </div>
 
+      <!-- ஈரோடு -->
       <div class="district-card">
         <div class="district-title">ஈரோடு மாவட்டம்</div>
-        <b>தலைவர்:</b> பத்திரிக்கையாளர் திரு.D.ராமலிங்கம் B.Com.<br>
-        <b>துணை தலைவர்:</b> திரு.V. தங்கவேல்<br>
-        <b>செயலாளர்:</b> திரு.M. ஜெய்லானி<br>
-        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> திரு.K.S. பாலாஜி B.E<br>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி. திலகவதி ஆறுமுகம்<br>
-        <b>மகளிர் அணி துணை தலைவர்:</b> திருமதி.நிர்மலா நிரஞ்சல் குமார் MA.,B.Ed.<br>
-        <b>மகளிர் அணி செயலாளர்:</b> திருமதி. சசிகலா ராமலிங்கம்<br>
-        <b>மகளிர் அணி துணைச் செயலாளர்:</b> திருமதி.S.மகேஸ்வரி<br>
-        <b>பொருளாளர்:</b> திரு. மாரியப்பன் சுப்பிரமணியன்<br>
-        <b>செயற்குழு உறுப்பினர்கள்:</b> திரு.சதீஷ்குமார் ரத்தினம், திரு. K.தனகோபால், திருமதி. ஜெனிபர் இமானுவேல்<br>
-        <b>பவானி நகர தலைவர்:</b> திரு.Rtn.Dr. பாரதிராஜா சந்திரசேகரன்
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">பத்திரிக்கையாளர் திரு.D.ராமலிங்கம் B.Com.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட துணை தலைவர்</span><span class="person-name">திரு.V. தங்கவேல்</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.M. ஜெய்லானி</span></div>
+          <div class="district-role-box"><span class="role-title">கல்வி மேம்பாட்டு ஆலோசகர்</span><span class="person-name">திரு.K.S. பாலாஜி B.E</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி. திலகவதி ஆறுமுகம்</span></div>
+          <div class="district-role-box"><span class="role-title">மகளிர் அணி துணை தலைவர்</span><span class="person-name">திருமதி.நிர்மலா நிரஞ்சல் குமார் MA.,B.Ed.</span></div>
+          <div class="district-role-box"><span class="role-title">மகளிர் அணி செயலாளர்</span><span class="person-name">திருமதி. சசிகலா ராமலிங்கம்</span></div>
+          <div class="district-role-box"><span class="role-title">மகளிர் அணி துணைச் செயலாளர்</span><span class="person-name">திருமதி.S.மகேஸ்வரி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட பொருளாளர்</span><span class="person-name">திரு. மாரியப்பன் சுப்பிரமணியன்</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 1</span><span class="person-name">திரு.சதீஷ்குமார் ரத்தினம்</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 2</span><span class="person-name">திரு. K.தனகோபால்</span></div>
+          <div class="district-role-box"><span class="role-title">செயற்குழு உறுப்பினர் 3</span><span class="person-name">திருமதி. ஜெனிபர் இமானுவேல்</span></div>
+          <div class="district-role-box"><span class="role-title">பவானி நகர தலைவர்</span><span class="person-name">திரு.Rtn.Dr. பாரதிராஜா சந்திரசேகரன்</span></div>
+        </div>
       </div>
 
+      <!-- விருதுநகர் -->
       <div class="district-card">
         <div class="district-title">விருதுநகர் மாவட்டம்</div>
-        <b>செயலாளர்:</b> பேராசிரியர் திரு S.செந்தில் MA.,B.Ed.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டச் செயலாளர்</span><span class="person-name">பேராசிரியர் திரு S.செந்தில் MA.,B.Ed.</span></div>
+        </div>
       </div>
 
+      <!-- தூத்துக்குடி -->
       <div class="district-card">
         <div class="district-title">தூத்துக்குடி மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.M.A. தர்மர் MA.<br>
-        <b>செயலாளர்:</b> திரு.Ln.MJF.S. முகமது ஷாஜகான் Ex.MC.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.M.A. தர்மர் MA.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட செயலாளர்</span><span class="person-name">திரு.Ln.MJF.S. முகமது ஷாஜகான் Ex.MC.</span></div>
+        </div>
       </div>
 
+      <!-- நீலகிரி -->
       <div class="district-card">
         <div class="district-title">நீலகிரி மாவட்டம்</div>
-        <b>செயலாளர்:</b> திரு.S.K. நிசார் அகமது
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டச் செயலாளர்</span><span class="person-name">திரு.S.K. நிசார் அகமது</span></div>
+        </div>
       </div>
 
+      <!-- சென்னை -->
       <div class="district-card">
         <div class="district-title">சென்னை மாவட்டம்</div>
-        <b>தலைவர்:</b> திரு.N. தாஸ் D.P.Ed.,B Sc.,MD in Acu.<br>
-        <b>துணைத் தலைவர்:</b> திருமதி M.செல்வி<br>
-        <b>மகளிர் அணி தலைவர்:</b> HR.K. திருமதி.தனலக்ஷ்மி M.Sc.,yoga, M Acu<br>
-        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> திரு.D. மணிகண்டன் D.Ftech DNYS<br>
-        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு.M.ஃபைசல் அஹமது M.Sc.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட தலைவர்</span><span class="person-name">திரு.N. தாஸ் D.P.Ed.,B Sc.,MD in Acu.</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்டத் துணைத் தலைவர்</span><span class="person-name">திருமதி M.செல்வி</span></div>
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">HR.K. திருமதி.தனலக்ஷ்மி M.Sc.,yoga, M Acu</span></div>
+          <div class="district-role-box"><span class="role-title">கல்வி மேம்பாட்டு ஆலோசகர்</span><span class="person-name">திரு.D. மணிகண்டன் D.Ftech DNYS</span></div>
+          <div class="district-role-box"><span class="role-title">தொழில் முனைவோர் பிரிவு தலைவர்</span><span class="person-name">திரு.M.ஃபைசல் அஹமது M.Sc.</span></div>
+        </div>
       </div>
 
+      <!-- மதுரை -->
       <div class="district-card">
         <div class="district-title">மதுரை மாவட்டம்</div>
-        <b>மகளிர் அணி தலைவர்:</b> திருமதி A. திருமலை லக்ஷ்மி BA.
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்ட மகளிர் அணி தலைவர்</span><span class="person-name">திருமதி A. திருமலை லக்ஷ்மி BA.</span></div>
+        </div>
       </div>
 
+      <!-- கிருஷ்ணகிரி -->
       <div class="district-card">
         <div class="district-title">கிருஷ்ணகிரி மாவட்டம்</div>
-        <b>செயலாளர்:</b> திருமதி.M. சத்தியவாணி
+        <div class="district-roles-grid">
+          <div class="district-role-box"><span class="role-title">மாவட்டச் செயலாளர்</span><span class="person-name">திருமதி.M. சத்தியவாணி</span></div>
+        </div>
       </div>
 
     </div>
