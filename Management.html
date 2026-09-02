@@ -3,21 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>நிர்வாக அமைப்பு படிநிலை</title>
+<title>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
 <style>
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f4f6f9;
     margin: 0;
     padding: 20px;
     text-align: center;
   }
 
+  h1 {
+    color: #1a365d;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+
   .tree-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -25,120 +31,101 @@
   .level-card {
     background: #ffffff;
     border-radius: 10px;
-    padding: 15px 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    width: 80%;
-    max-width: 600px;
-    transition: transform 0.2s;
-  }
-
-  .level-card:hover {
-    transform: translateY(-3px);
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 90%;
+    max-width: 750px;
+    box-sizing: border-box;
   }
 
   /* பதவிகளுக்கான தனித்துவமான வண்ணங்கள் */
-  .president {
-    border-top: 6px solid #d9534f;
-    background-color: #fff5f5;
-  }
-
-  .vice-president {
-    border-top: 6px solid #f0ad4e;
-    background-color: #fffdf5;
-    width: 90%;
-    max-width: 800px;
-  }
-
-  .gen-secretary {
-    border-top: 6px solid #0275d8;
-    background-color: #f0f8ff;
-    width: 75%;
-  }
-
-  .treasurer {
-    border-top: 6px solid #5cb85c;
-    background-color: #f4fff4;
-    width: 70%;
-  }
-
-  .secretaries {
-    border-top: 6px solid #5bc0de;
-    background-color: #f0ffff;
-    width: 85%;
-  }
-
-  .executive-members {
-    border-top: 6px solid #6c757d;
-    background-color: #f8f9fa;
-    width: 90%;
-  }
-
-  .district-officials {
-    border-top: 6px solid #343a40;
-    background-color: #ffffff;
-    width: 95%;
-  }
+  .president { border-top: 6px solid #d9534f; background-color: #fff5f5; width: 60%; }
+  .vice-president { border-top: 6px solid #f0ad4e; background-color: #fffdf5; }
+  .gen-secretary { border-top: 6px solid #0275d8; background-color: #f0f8ff; width: 65%; }
+  .treasurer { border-top: 6px solid #5cb85c; background-color: #f4fff4; width: 65%; }
+  .secretaries { border-top: 6px solid #5bc0de; background-color: #f0ffff; }
+  .executive-members { border-top: 6px solid #6c757d; background-color: #f8f9fa; }
+  .wing-heads { border-top: 6px solid #8e44ad; background-color: #fcf4ff; }
+  .district-section { border-top: 6px solid #2c3e50; background-color: #ffffff; width: 100%; max-width: 1000px; }
 
   h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
-    color: #333;
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
   }
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin-top: 10px;
   }
 
   .grid-item {
     background: #ffffff;
-    padding: 8px 12px;
+    padding: 10px;
     border-radius: 6px;
-    border: 1px solid #e0e0e0;
-    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    font-size: 0.92rem;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .district-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .district-title {
+    font-weight: bold;
+    color: #1e293b;
+    border-bottom: 2px solid #94a3b8;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    text-align: center;
   }
 
   .arrow {
     font-size: 20px;
-    color: #888;
-    margin: -10px 0;
+    color: #64748b;
+    margin: -8px 0;
   }
 </style>
 </head>
 <body>
 
-<h1>அமைப்பின் மாநில & மாவட்ட நிர்வாகிகள் படிநிலை</h1>
+<h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</h1>
 
 <div class="tree-container">
 
-  <!-- மாநிலத் தலைவர் -->
+  <!-- நிறுவனர் & மாநில தலைவர் -->
   <div class="level-card president">
-    <h2>மாநிலத் தலைவர்</h2>
-    <div>தலைவர் பெயர்</div>
+    <h2>நிறுவனர் & மாநில தலைவர்</h2>
+    <div style="font-size: 1.1rem; font-weight: bold; color: #b91c1c;">முஹம்மது யஹ்யா</div>
   </div>
 
   <div class="arrow">↓</div>
 
-  <!-- மாநில துணைத் தலைவர்கள் (23 நபர்கள்) -->
+  <!-- மாநில துணைத் தலைவர்கள் -->
   <div class="level-card vice-president">
-    <h2>மாநில துணைத் தலைவர்கள் (23 நபர்கள்)</h2>
+    <h2>மாநில துணைத் தலைவர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">துணைத் தலைவர் 1</div>
-      <div class="grid-item">துணைத் தலைவர் 2</div>
-      <div class="grid-item">துணைத் தலைவர் 3</div>
-      <!-- தேவைக்கேற்ப 23 பெயர்கள் வரை சேர்க்கலாம் -->
-      <div class="grid-item">...</div>
+      <div class="grid-item">திரு.R.சாக்யா பிரபு M.Com.,B.Ed., M.Phil.</div>
+      <div class="grid-item">திரு.M.E.அமோஸ்</div>
+      <div class="grid-item">திரு.A.பஸ்லுல் ரஹ்மான் BA.</div>
     </div>
   </div>
 
   <div class="arrow">↓</div>
 
-  <!-- மாநில பொதுச் செயலாளர் -->
+  <!-- மாநில பொது செயலாளர் -->
   <div class="level-card gen-secretary">
-    <h2>மாநில பொதுச் செயலாளர்</h2>
-    <div>பொதுச் செயலாளர் பெயர்</div>
+    <h2>மாநில பொது செயலாளர்</h2>
+    <div style="font-weight: bold;">திரு.N.கோபி MA.,M.Phil.,MBA.,M.Phil.</div>
   </div>
 
   <div class="arrow">↓</div>
@@ -146,7 +133,7 @@
   <!-- மாநில பொருளாளர் -->
   <div class="level-card treasurer">
     <h2>மாநில பொருளாளர்</h2>
-    <div>பொருளாளர் பெயர்</div>
+    <div style="font-weight: bold;">M.மகாலெட்சமி B.Sc.</div>
   </div>
 
   <div class="arrow">↓</div>
@@ -155,9 +142,12 @@
   <div class="level-card secretaries">
     <h2>மாநில செயலாளர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">செயலாளர் 1</div>
-      <div class="grid-item">செயலாளர் 2</div>
-      <div class="grid-item">செயலாளர் 3</div>
+      <div class="grid-item">திரு.P.முருகேசன் B.Sc.</div>
+      <div class="grid-item">திரு.J.நந்தகோபால்</div>
+      <div class="grid-item">திரு.M.முஸ்தபா நூராணி MSW</div>
+      <div class="grid-item">திரு.B.சௌகத் அலி பாபு</div>
+      <div class="grid-item">திரு.G.பிரகாஷ் DME</div>
+      <div class="grid-item">வழக்கறிஞர் திரு.இரா.சீனிவாசன் MA.,B.Ed.,LLB.</div>
     </div>
   </div>
 
@@ -167,22 +157,204 @@
   <div class="level-card executive-members">
     <h2>மாநில செயற்குழு உறுப்பினர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">உறுப்பினர் 1</div>
-      <div class="grid-item">உறுப்பினர் 2</div>
-      <div class="grid-item">உறுப்பினர் 3</div>
-      <div class="grid-item">உறுப்பினர் 4</div>
+      <div class="grid-item">திரு.S.முகம்மது பைசுல் B.Com.</div>
+      <div class="grid-item">திரு.C.T.சேதுராம் D.Acu.</div>
+      <div class="grid-item">திரு.ஆ.கோமதி நாயகம்</div>
+      <div class="grid-item">திருமதி S.ஆரோக்கிய மேரி BA.,MSW</div>
+      <div class="grid-item">திரு. Dr.G.பாலசுப்பிரமணியம்</div>
     </div>
   </div>
 
   <div class="arrow">↓</div>
 
-  <!-- மாவட்ட நிர்வாகிகள் -->
-  <div class="level-card district-officials">
-    <h2>மாவட்ட நிர்வாகிகள்</h2>
+  <!-- மாநில அணி & பிரிவுப் பொறுப்பாளர்கள் -->
+  <div class="level-card wing-heads">
+    <h2>மாநில அணி & பிரிவுப் பொறுப்பாளர்கள்</h2>
     <div class="grid-container">
-      <div class="grid-item">மாவட்டத் தலைவர்</div>
-      <div class="grid-item">மாவட்டச் செயலாளர்</div>
-      <div class="grid-item">மாவட்டப் பொருளாளர்</div>
+      <div class="grid-item"><b>மகளிர் அணி தலைவர்:</b><br>கி.சுபாஷினி M.A.,M.Phil.,B.Ed.</div>
+      <div class="grid-item"><b>மகளிர் அணி செயலாளர்:</b><br>S.ருக்மணி தேவி MA.,Lit.</div>
+      <div class="grid-item"><b>அயலக மண்டல ஒருங்கிணைப்பாளர்:</b><br>S.முஹம்மது இப்ராஹிம் முஸ்தபா BE.</div>
+      <div class="grid-item"><b>கல்வி மேம்பாட்டு ஆலோசகர்:</b><br>திருமதி.அன்னமேரி சாமிக்கண்ணு MA.,B.Ed.,M.Phil.</div>
+      <div class="grid-item"><b>கலை இலக்கிய பண்பாட்டு செயலாளர்:</b><br>திருமதி.பாண்டி மீனாள் ஏகாம்பரம்</div>
+      <div class="grid-item"><b>கல்வி வளர்ச்சிக் குழு செயலாளர்:</b><br>திரு.A.S.முஹம்மது அப்பாஸ் BE.,MBA.</div>
+      <div class="grid-item"><b>தொழிலாளர் நலப் பிரிவு தலைவர்:</b><br>திருமதி.நவமணி மூர்த்தி BA.</div>
+      <div class="grid-item"><b>தொழில் முனைவோர் பிரிவு தலைவர்:</b><br>திரு.A.முஹம்மது இப்ராஹிம்</div>
+      <div class="grid-item"><b>தொழில் முனைவோர் பிரிவு செயலாளர்:</b><br>திரு.கோபால் பழனிச்சாமி</div>
+      <div class="grid-item"><b>சமூக நீதி & மனித உரிமை தலைவர்:</b><br>திரு.ஜெகபர் அலி</div>
+      <div class="grid-item"><b>இரத்ததான சேவை பிரிவு செயலாளர்:</b><br>வழக்கறிஞர் திரு.G.வீரமணி MA.,LLB.</div>
+      <div class="grid-item"><b>சட்ட உரிமைகள் விழிப்புணர்வு செயலாளர்:</b><br>வழக்கறிஞர் கோமதி காளிமுத்து B.Sc.,MBA.,LLB.</div>
+      <div class="grid-item"><b>மாற்றுத்திறனாளிகள் நலப் பிரிவு தலைவர்:</b><br>திரு.B.அப்சல் பாஷா</div>
+      <div class="grid-item"><b>மாற்றுத்திறனாளிகள் நலப் பிரிவு செயலாளர்:</b><br>திரு.A.G.மணி சேலம்</div>
+    </div>
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <!-- மாவட்ட கட்டமைப்பு நிர்வாகிகள் -->
+  <div class="level-card district-section">
+    <h2>மாவட்ட கட்டமைப்பு நிர்வாகிகள்</h2>
+    <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+      <div class="district-card">
+        <div class="district-title">கன்னியாகுமரி மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.Dr A.P. அருள்குமரேசன் MBA,(HM),M.Sc.,MS(coun).,MSW.,MA(JMC),PhD<br>
+        <b>செயலாளர்:</b> திருமதி K.செல்வம் நடராஜன் MA.<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி S. ஜெயா ஸ்ரீதரன் BA.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">திருவண்ணாமலை மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.முனியாண்டி MA.,B.Ed.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">வேலூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> திருமதி.D. ராதா ஜெயலெட்சுமி<br>
+        <b>மாற்றுத்திறனாளிகள் நலத் தலைவர்:</b> திரு.F.M. ஜாபர் அப்துல்லா<br>
+        <b>மாற்றுத்திறனாளிகள் நலப் பொருளாளர்:</b> திரு.R. பிரசாத் பாபு
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">செங்கல்பட்டு மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.S.இசையமுதன் BE.<br>
+        <b>துணைத் தலைவர்:</b> திருமதி. நந்தினி சேகர் D.Nur.,M.Sc.<br>
+        <b>செயலாளர்:</b> திருமதி P.வள்ளி
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">திருவாரூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> திருமதி.கலா சந்திரசேகரன்<br>
+        <b>துணைத் தலைவர்:</b> திரு.S.J. ஹசன் குத்துஸ்<br>
+        <b>செயலாளர்:</b> திருமதி. இரா.ஜெ.பாத்திமா அஸ்மா<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி.தீபா வரதராஜன் MSW
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">கள்ளக்குறிச்சி மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.A. ஷேக் சலாவுதீன்<br>
+        <b>துணை தலைவர்:</b> திரு.M. அஜித் குமார் B.Sc.,B.Ed.<br>
+        <b>செயலாளர்:</b> திரு.மாயகிருஷ்ணன்<br>
+        <b>துணைச் செயலாளர்:</b> திரு.விமல் இளவரசன் BA.,LLB.<br>
+        <b>பொருளாளர்:</b> திரு.ஷாகுல் MBA.<br>
+        <b>செயற்குழு உறுப்பினர்கள்:</b><br>
+        1. திரு.பாதுஷா ஜாகிர் உசேன் MBA<br>
+        2. திரு.சாமுவேல் செல்லதுரை MBA.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">புதுக்கோட்டை மாவட்டம்</div>
+        <b>தலைவர்:</b> முனைவர் திருமதி.K.தமிழ்செல்வி Phd.<br>
+        <b>துணைத்தலைவர்:</b> திரு.S.சிங்காரம்<br>
+        <b>செயலாளர்:</b> திரு.M.சிராஜுதீன்<br>
+        <b>துணைசெயலாளர்:</b> திரு.S.A.மருதராஜ்<br>
+        <b>தொழிலாளர் நலப் பிரிவு தலைவர்:</b> திரு.P.நாகமுத்து BA.<br>
+        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு.R.பிரசன்னா M.Tech.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">தஞ்சாவூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> வழக்கறிஞர் திரு.Dr.G.சித்திரவேலு MA.,M.Phil.,LLB<br>
+        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு. I. முஹம்மது ரியாஸ்
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">தென்காசி மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.ஹக்கீம்<br>
+        <b>துணைத் தலைவர்:</b> திரு.ராமசாமி பரமசிவம் DCE<br>
+        <b>செயலாளர்:</b> திரு.சுரண்டை செல்வன்<br>
+        <b>மகளிர் அணி தலைவர்:</b> M.J. திருமதி சகிலா பானு முஹம்மது சாகுல் ஹமீது
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">திண்டுக்கல் மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு A.அஷ்ரப் அலி<br>
+        <b>செயலாளர்:</b> திரு.C வீராசாமி<br>
+        <b>துணைச் செயலாளர்:</b> திரு.M. நேரு<br>
+        <b>ரத்த சேவை பிரிவு தலைவர்:</b> திரு M.லோகநாதன்<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி. வள்ளி
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">கடலூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.சசிகுமார் MCA<br>
+        <b>செயலாளர்:</b> திரு.G K. சிலம்பரசன் MA.,B.Ed.,CLP
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">கோயம்புத்தூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.ரவி சாமிதாஸ் BL<br>
+        <b>செயலாளர்:</b> திரு.N. விவேகானந்தன் B.Sc.<br>
+        <b>துணைச் செயலாளர்:</b> திருமதி.நா. விக்னேஷ்வரி<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி. நிஷா மூர்த்தி<br>
+        <b>மகளிர் அணி துணைத்தலைவர்:</b> திருமதி.ஷோபா BBA.<br>
+        <b>மகளிர் அணி செயலாளர்:</b> திருமதி.A. மேரி இமாகுலேட்<br>
+        <b>பொருளாளர்:</b> திருமதி.S.மைதிலி MBA<br>
+        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> M.பிரதிக்ஷா B.Sc.,IT<br>
+        <b>செயற்குழு உறுப்பினர்கள்:</b><br>
+        1. திரு. M. செந்தில் குமார்<br>
+        2. திருமதி உண்ணாமலை சிவகுமார்
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">திருப்பூர் மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.M. மலர்மன்னன்<br>
+        <b>துணை தலைவர்:</b> திரு. V.G.வெங்கடுசாமி B.Sc.,B.lit.,D.Ted.<br>
+        <b>செயலாளர்:</b> திரு. உஷா மூர்த்தி<br>
+        <b>துணைச் செயலாளர்:</b> திரு.M. பார்த்திபன் B.Com.<br>
+        <b>பொருளாளர்:</b> திரு.S.தனபால்<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி.பானுமதி சரவணகுமார்
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">ஈரோடு மாவட்டம்</div>
+        <b>தலைவர்:</b> பத்திரிக்கையாளர் திரு.D.ராமலிங்கம் B.Com.<br>
+        <b>துணை தலைவர்:</b> திரு.V. தங்கவேல்<br>
+        <b>செயலாளர்:</b> திரு.M. ஜெய்லானி<br>
+        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> திரு.K.S. பாலாஜி B.E<br>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி. திலகவதி ஆறுமுகம்<br>
+        <b>மகளிர் அணி துணை தலைவர்:</b> திருமதி.நிர்மலா நிரஞ்சல் குமார் MA.,B.Ed.<br>
+        <b>மகளிர் அணி செயலாளர்:</b> திருமதி. சசிகலா ராமலிங்கம்<br>
+        <b>மகளிர் அணி துணைச் செயலாளர்:</b> திருமதி.S.மகேஸ்வரி<br>
+        <b>பொருளாளர்:</b> திரு. மாரியப்பன் சுப்பிரமணியன்<br>
+        <b>செயற்குழு உறுப்பினர்கள்:</b> திரு.சதீஷ்குமார் ரத்தினம், திரு. K.தனகோபால், திருமதி. ஜெனிபர் இமானுவேல்<br>
+        <b>பவானி நகர தலைவர்:</b> திரு.Rtn.Dr. பாரதிராஜா சந்திரசேகரன்
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">விருதுநகர் மாவட்டம்</div>
+        <b>செயலாளர்:</b> பேராசிரியர் திரு S.செந்தில் MA.,B.Ed.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">தூத்துக்குடி மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.M.A. தர்மர் MA.<br>
+        <b>செயலாளர்:</b> திரு.Ln.MJF.S. முகமது ஷாஜகான் Ex.MC.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">நீலகிரி மாவட்டம்</div>
+        <b>செயலாளர்:</b> திரு.S.K. நிசார் அகமது
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">சென்னை மாவட்டம்</div>
+        <b>தலைவர்:</b> திரு.N. தாஸ் D.P.Ed.,B Sc.,MD in Acu.<br>
+        <b>துணைத் தலைவர்:</b> திருமதி M.செல்வி<br>
+        <b>மகளிர் அணி தலைவர்:</b> HR.K. திருமதி.தனலக்ஷ்மி M.Sc.,yoga, M Acu<br>
+        <b>கல்வி மேம்பாட்டு ஆலோசகர்:</b> திரு.D. மணிகண்டன் D.Ftech DNYS<br>
+        <b>தொழில் முனைவோர் பிரிவு தலைவர்:</b> திரு.M.ஃபைசல் அஹமது M.Sc.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">மதுரை மாவட்டம்</div>
+        <b>மகளிர் அணி தலைவர்:</b> திருமதி A. திருமலை லக்ஷ்மி BA.
+      </div>
+
+      <div class="district-card">
+        <div class="district-title">கிருஷ்ணகிரி மாவட்டம்</div>
+        <b>செயலாளர்:</b> திருமதி.M. சத்தியவாணி
+      </div>
+
     </div>
   </div>
 
