@@ -1,149 +1,237 @@
-
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>நிர்வாகிகள் - TNFSWOV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background-color: #005f73;
-            color: white;
-            text-align: center;
-            padding: 15px 10px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 18px;
-        }
-        nav {
-            background-color: #0a4f5c;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-        }
-        .poster-card {
-            max-width: 500px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 25px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            text-align: center;
-            border: 2px solid #005f73;
-        }
-        .title-top {
-            color: #005f73;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-        .role-red {
-            color: #d90429;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .name-green {
-            color: #1b4332;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .divider {
-            color: #d4af37;
-            font-size: 18px;
-            margin: 15px 0;
-        }
-        .role-blue {
-            color: #005f73;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-        .name-black {
-            color: #000000;
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #1a1a1a;
-            color: #ccc;
-            text-align: center;
-            padding: 12px;
-            font-size: 12px;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>நிர்வாகிகள் - தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+    
+    /* ஹெடர் பகுதி */
+    .header-box {
+      background-color: #0d5c63;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .header-box h1 { margin: 0; font-size: 20px; font-weight: bold; }
+    .header-box p { margin: 5px 0 0; font-size: 14px; color: #b2dfdb; }
+
+    /* மெனு பட்டை */
+    nav { background-color: #083c42; padding: 12px 0; text-align: center; }
+    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 14.5px; display: inline-block; padding: 4px 8px; }
+    nav a:hover { color: #80cbc4; }
+
+    /* முதன்மை உள்ளடக்கம் */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .page-title {
+      text-align: center;
+      color: #0d5c63;
+      border-bottom: 2px solid #0d5c63;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* அட்டவணை அமைப்பு */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+    th {
+      background-color: #0d5c63;
+      color: white;
+      font-size: 15px;
+    }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+
+    .section-head {
+      background-color: #e0f2f1;
+      color: #004d40;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    /* நிறுவனருக்கான சிறப்பு பகுதி */
+    .founder-card {
+      background: #f1f8f6;
+      border-left: 5px solid #0d5c63;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .founder-card h3 { margin: 0; color: #0d5c63; font-size: 18px; }
+    .founder-card p { margin: 5px 0 0; font-size: 15px; font-weight: bold; color: #333; }
+
+    .upcoming-box {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid #ffeeba;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</h1>
-    </header>
+  <div class="header-box">
+    <h1>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு (TNFSWOV)</h1>
+    <p>சமூக மாற்றத்திற்கான தன்னார்வ சக்தி</p>
+  </div>
 
-    <nav>
-        <a href="index.html">முகப்பு</a>
-        <a href="Management.html">நிர்வாகம்</a>
-        <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
-    </nav>
+  <nav>
+    <a href="index.html">முகப்பு</a>
+    <a href="index.html#about-us">எங்களைப் பற்றி</a>
+    <a href="management.html">நிர்வாகம்</a>
+    <a href="https://form.svhrt.com/6a632d5908fab3b6f5806244" target="_blank">உறுப்பினராக இணையுங்கள்</a>
+    <a href="contact.html">தொடர்புகொள்ள</a>
+  </nav>
 
-    <div class="poster-card">
-        
-        <div class="title-top">
-            தமிழ்நாடு சமூக நல<br>அமைப்புகள் மற்றும்<br>தன்னார்வலர்கள் கூட்டமைப்பு
-        </div>
+  <div class="container">
+    <h2 class="page-title">மாநில நிர்வாகக் குழு உறுப்பினர்கள்</h2>
 
-        <div class="role-red">நிறுவனர் & மாநிலத் தலைவர்</div>
-        <div class="name-green">Dr. K. முஹம்மது யஹ்யா</div>
-
-        <div class="divider">❖ ❖ ❖ ❖ ❖</div>
-
-        <div class="role-blue">பொதுச் செயலாளர்</div>
-        <div class="name-black">Dr. N. கோபி</div>
-
-        <div class="role-blue">பொருளாளர்</div>
-        <div class="name-black">M. மஹாலக்ஷ்மி BSc.,</div>
-
-        <div class="role-blue">மாநிலத் துணைத் தலைவர்கள்</div>
-        <div class="name-black">
-            R. சாக்கிய பிரபு<br>
-            M.E. அமோஸ்
-        </div>
-
-        <div class="role-blue">மாநில செயலாளர்கள்</div>
-        <div class="name-black">
-            P. முருகேசன் B Sc.,<br>
-            J. நந்த கோபால்<br>
-            B. சௌக்கத் அலி பாபு<br>
-            G. பிரகாஷ் DME<br>
-            M. முஸ்தபா நூரானி<br>
-            இரா. சீனிவாசன் MA., B.Ed., LLB.,
-        </div>
-
+    <!-- நிறுவனர் பகுதி -->
+    <div class="founder-card">
+      <p style="color: #d9534f; margin-bottom: 3px;">நிறுவனர் & மாநில தலைவர்</p>
+      <h3>Dr. K. முஹம்மது யஹ்யா</h3>
     </div>
 
-    <footer>
-        © 2026 தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு
-    </footer>
+    <!-- நிர்வாகிகள் அட்டவணை -->
+    <table>
+      <thead>
+        <tr>
+          <th>பொறுப்பு / பிரிவு</th>
+          <th>நிர்வாகி பெயர் & கல்வித்தகுதி</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- மாநிலத் தலைமை நிர்வாகிகள் -->
+        <tr class="section-head"><td colspan="2">மாநிலத் தலைமை நிர்வாகிகள்</td></tr>
+        <tr>
+          <td><strong>மாநில துணைத் தலைவர்கள்</strong></td>
+          <td>
+            • திரு. R. பிரபு M.Com., B.Ed., M.Phil.<br>
+            • திரு. M.E. அமோஸ்<br>
+            • திரு. A. பஸ்லுல் ரஹ்மான் BA.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>மாநில பொது செயலாளர்</strong></td>
+          <td>திரு. N. கோபி MA., M.Phil., MBA., M.Phil.</td>
+        </tr>
+        <tr>
+          <td><strong>மாநில பொருளாளர்</strong></td>
+          <td>M. மகாலெட்சுமி B.Sc.</td>
+        </tr>
+        <tr>
+          <td><strong>மாநில செயலாளர்கள்</strong></td>
+          <td>
+            • திரு. P. முருகேசன் B.Sc.<br>
+            • திரு. J. நந்தகோபால்<br>
+            • திரு. M. முஸ்தபா நூராணி MSW<br>
+            • திரு. B. சௌகத் அலி பாபு<br>
+            • திரு. G. பிரகாஷ் DME<br>
+            • வழக்கறிஞர் திரு. இரா. சீனிவாசன் MA., B.Ed., LLB.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>மாநில செயற்குழு உறுப்பினர்கள்</strong></td>
+          <td>
+            • திரு. S. முகம்மது பைசுல் B.Com.<br>
+            • திரு. C.T. சேதுராம் D.Acu.<br>
+            • திரு. ஆ. கோமதி நாயகம்<br>
+            • திருமதி S. ஆரோக்கிய மேரி BA., MSW<br>
+            • திரு. Dr. G. பாலசுப்பிரமணியம்
+          </td>
+        </tr>
+
+        <!-- மகளிர் அணி & ஒருங்கிணைப்பாளர்கள் -->
+        <tr class="section-head"><td colspan="2">மகளிர் அணி & மண்டல ஒருங்கிணைப்பு</td></tr>
+        <tr>
+          <td><strong>மாநில மகளிர் அணி தலைவர்</strong></td>
+          <td>கி. சுபாஷினி M.A., M.Phil., B.Ed.</td>
+        </tr>
+        <tr>
+          <td><strong>மாநில மகளிர் அணி செயலாளர்</strong></td>
+          <td>S. ருக்மணி தேவி MA., Lit.</td>
+        </tr>
+        <tr>
+          <td><strong>அயலக மண்டல ஒருங்கிணைப்பாளர்</strong></td>
+          <td>S. முஹம்மது இப்ராஹிம் முஸ்தபா BE.</td>
+        </tr>
+
+        <!-- துணைப் பிரிவுகள் -->
+        <tr class="section-head"><td colspan="2">சிறப்புப் பிரிவுகளின் நிர்வாகிகள்</td></tr>
+        <tr>
+          <td><strong>மாணவர் நலன் மற்றும் கல்வி மேம்பாட்டு ஆலோசகர்</strong></td>
+          <td>திருமதி. அன்னமேரி சாமிக்கண்ணு MA., B.Ed., M.Phil.</td>
+        </tr>
+        <tr>
+          <td><strong>கல்வி வளர்ச்சிக் குழு மாநில செயலாளர்</strong></td>
+          <td>திரு. A.S. முஹம்மது அப்பாஸ் BE., MBA.</td>
+        </tr>
+        <tr>
+          <td><strong>கலை இலக்கிய பண்பாட்டு பிரிவு செயலாளர்</strong></td>
+          <td>திருமதி. பாண்டி மீனாள் ஏகாம்பரம்</td>
+        </tr>
+        <tr>
+          <td><strong>தொழிலாளர் நலப் பிரிவு தலைவர்</strong></td>
+          <td>திருமதி. நவமணி மூர்த்தி BA.</td>
+        </tr>
+        <tr>
+          <td><strong>தொழில் முனைவோர் பிரிவு தலைவர்</strong></td>
+          <td>திரு. A. முஹம்மது இப்ராஹிம்</td>
+        </tr>
+        <tr>
+          <td><strong>தொழில் முனைவோர் பிரிவு செயலாளர்</strong></td>
+          <td>திரு. கோபால் பழனிச்சாமி</td>
+        </tr>
+        <tr>
+          <td><strong>சமூக நீதி மற்றும் மனித உரிமை பிரிவு தலைவர்</strong></td>
+          <td>திரு. ஜெகபர் அலி</td>
+        </tr>
+        <tr>
+          <td><strong>இரத்ததான சேவை பிரிவு செயலாளர்</strong></td>
+          <td>வழக்கறிஞர் திரு. G. வீரமணி MA., LLB.</td>
+        </tr>
+        <tr>
+          <td><strong>சட்ட உரிமைகள் விழிப்புணர்வு பிரிவு செயலாளர்</strong></td>
+          <td>வழக்கறிஞர் கோமதி காளிமுத்து B.Sc., MBA., LLB.</td>
+        </tr>
+        <tr>
+          <td><strong>மாற்றுத்திறனாளிகள் நலப்பிரிவு தலைவர்</strong></td>
+          <td>திரு. B. அப்சல் பாஷா</td>
+        </tr>
+        <tr>
+          <td><strong>மாற்றுத்திறனாளிகள் நலப்பிரிவு செயலாளர்</strong></td>
+          <td>திரு. A.G. மணி சேலம்</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- விரைவில் பதிவு செய்யப்படும் அறிவிப்பு -->
+    <div class="upcoming-box">
+      📌 மாவட்ட கட்டமைப்பு நிர்வாகிகள் விவரம் விரைவில் பதிவு செய்யப்படும்.
+    </div>
+  </div>
 
 </body>
 </html>
