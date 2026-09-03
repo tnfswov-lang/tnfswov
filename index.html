@@ -37,14 +37,56 @@
     li {
       margin-bottom: 8px;
     }
+    
+    /* HTML மெனு பார் (Image Map வேலை செய்யாத மொபைல் திரைகளுக்கு மாற்று) */
+    .nav-bar {
+      background-color: #004d25;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+    .nav-bar a:hover {
+      background-color: #2e7d32;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 1. புதிய பேனர் படம் -->
+  <!-- 1. புதிய பேனர் படம் மற்றும் அதற்கான க்ளிக் லிங்குகள் (Image Map) -->
   <header style="width:100%; overflow:hidden;">
-    <img src="banner.png" alt="TNFSWOV Banner" style="width:100%; height:auto; display:block;">
+    <img src="banner.png" alt="TNFSWOV Banner" usemap="#bannermap" style="width:100%; height:auto; display:block;">
+    
+    <map name="bannermap">
+      <!-- பேனரின் அடிப்பகுதியில் உள்ள மெனுக்களுக்கான லிங்குகள் -->
+      <area shape="rect" coords="0,220,130,280" href="index.html" alt="முகப்பு">
+      <area shape="rect" coords="131,220,260,280" href="about.html" alt="எங்களைப் பற்றி">
+      <area shape="rect" coords="261,220,390,280" href="index.html#purpose" alt="நோக்கங்கள்">
+      <area shape="rect" coords="391,220,550,280" href="index.html#join" alt="உறுப்பினராக இணையுங்கள்">
+      <area shape="rect" coords="551,220,680,280" href="contact.html" alt="தொடர்புகள்">
+      <area shape="rect" coords="681,220,800,280" href="news.html" alt="செய்திகள்">
+      <area shape="rect" coords="801,220,1000,280" href="contact.html" alt="தொடர்பு கொள்ள">
+    </map>
   </header>
+
+  <!-- மொபைல் மற்றும் எளிதான பயன்பாட்டிற்கான மெனு பார் -->
+  <nav class="nav-bar">
+    <a href="index.html">முகப்பு</a>
+    <a href="about.html">எங்களைப் பற்றி</a>
+    <a href="#purpose">நோக்கங்கள்</a>
+    <a href="#join">உறுப்பினராக இணையுங்கள்</a>
+    <a href="contact.html">தொடர்புகள்</a>
+    <a href="Management.html">நிர்வாகம்</a>
+    <a href="contact.html">தொடர்பு கொள்ள</a>
+  </nav>
 
   <!-- 2. லோகோ, தலைப்பு மற்றும் தலைவர் படம் -->
   <section style="background:#fff; padding:20px 10px; border-bottom:2px solid #2e7d32;">
@@ -52,7 +94,7 @@
       
       <!-- லோகோ -->
       <div>
-        <img src="IMG-20260828-WA025...png" alt="Logo" style="max-width:130px; height:auto;" onerror="this.src='banner.png'">
+        <img src="banner.png" alt="Logo" style="max-width:130px; height:auto; object-fit:contain;">
       </div>
 
       <!-- நடுப்பகுதி விவரங்கள் -->
@@ -63,9 +105,9 @@
         <div style="color:#333; font-size:0.95rem; font-weight:bold;">நிறுவனர் &amp; மாநில தலைவர்</div>
       </div>
 
-      <!-- தலைவர் படம் (GitHub-இல் உள்ள thalaivar.jpg பெயர்) -->
+      <!-- தலைவர் படம் (GitHub-இல் உள்ள thalaivar.jpg பெயர் சரியாகக் கொடுக்கப்பட்டுள்ளது) -->
       <div>
-        <img src="thalaivar.jpg" alt="Leader" style="max-width:120px; border-radius:50%; height:auto;">
+        <img src="thalaivar.jpg" alt="Leader" style="max-width:120px; border-radius:50%; height:auto; display:block;">
       </div>
 
     </div>
@@ -76,14 +118,14 @@
     </div>
   </section>
 
-  <!-- 3. பக்கத்தின் முதன்மை உள்ளடக்கம் (Main Content) -->
+  <!-- 3. பக்கத்தின் முதன்மை உள்ளடக்கம் -->
   <main class="container">
     <p style="font-weight: bold; margin-bottom: 15px;">அன்பான உறவுகளே...!</p>
     <p style="margin-bottom: 15px;">
       சமூக நலனுக்காக அர்ப்பணிப்புடன் செயல்பட்டு வரும் அறக்கட்டளைகள், சமூக நல அமைப்புகள், தன்னார்வ அமைப்புகள், முதியோர் இல்லங்கள், குழந்தைகள் இல்லங்கள், மாற்றுத்திறனாளிகள் நல அமைப்புகள், கல்வி மற்றும் மருத்துவ சேவை அமைப்புகள், சுற்றுச்சூழல் அமைப்புகள், இரத்ததான அமைப்புகள் மற்றும் தனிப்பட்ட சமூக ஆர்வலர்கள் ஆகிய அனைவரையும் ஒரே குடையின் கீழ் ஒருங்கிணைக்கும் உயரிய நோக்கத்துடன் தமிழ்நாடு சமூகநல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு உருவாக்கப்படுகிறது.
     </p>
 
-    <h2>எங்கள் முக்கிய நோக்கங்கள்:</h2>
+    <h2 id="purpose">எங்கள் முக்கிய நோக்கங்கள்:</h2>
     <ul>
       <li>சமூக சேவை அமைப்புகளை ஒருங்கிணைத்தல்.</li>
       <li>சமூக ஆர்வலர்களுக்கு தேசிய மாநில அளவிலான அடையாளம் உருவாக்குதல்.</li>
@@ -94,7 +136,7 @@
       <li>அரசு மற்றும் சமூக அமைப்புகளுக்கு இடையே ஆக்கப்பூர்வமான பாலமாக செயல்படுதல்.</li>
     </ul>
 
-    <h2>யார் உறுப்பினராக இணையலாம்?</h2>
+    <h2 id="join">யார் உறுப்பினராக இணையலாம்?</h2>
     <ul>
       <li>பதிவு செய்யப்பட்ட அறக்கட்டளைகள்</li>
       <li>சமூக நல அமைப்புகள்</li>
