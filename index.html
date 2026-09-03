@@ -11,38 +11,33 @@
     h2 { color: #2e7d32; margin-bottom: 15px; border-bottom: 2px solid #2e7d32; padding-bottom: 5px; }
     ul { margin-left: 20px; margin-bottom: 20px; }
     li { margin-bottom: 8px; }
-
-    /* மெனு பார் */
-    .nav-bar { background-color: #004d25; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px 0; gap: 15px; }
-    .nav-bar a { color: white; text-decoration: none; padding: 8px 12px; font-size: 0.95rem; font-weight: bold; }
-    .nav-bar a:hover { background-color: #2e7d32; border-radius: 4px; }
   </style>
 </head>
 <body>
 
-  <!-- 1. புதிய பேனர் படம் -->
+  <!-- 1. புதிய பேனர் படம் மற்றும் கிளிக் செய்யும் மெனு பகுதிகள் (Image Map) -->
   <header style="width:100%; overflow:hidden;">
-    <img src="banner.png" alt="TNFSWOV Banner" style="width:100%; height:auto; display:block;">
+    <img src="banner.png" alt="TNFSWOV Banner" usemap="#bannermap" style="width:100%; height:auto; display:block;">
+    
+    <!-- பேனர் படத்தில் உள்ள மெனு வார்த்தைகளை கிளிக் செய்ய வைக்கும் இணைப்பு -->
+    <map name="bannermap">
+      <area shape="rect" coords="0,200,140,280" href="index.html" alt="முகப்பு">
+      <area shape="rect" coords="141,200,280,280" href="about.html" alt="எங்களைப் பற்றி">
+      <area shape="rect" coords="281,200,420,280" href="#purpose" alt="நோக்கங்கள்">
+      <area shape="rect" coords="421,200,580,280" href="#join" alt="உறுப்பினராக இணையுங்கள்">
+      <area shape="rect" coords="581,200,720,280" href="contact.html" alt="தொடர்புகள்">
+      <area shape="rect" coords="721,200,850,280" href="news.html" alt="செய்திகள்">
+      <area shape="rect" coords="851,200,1000,280" href="contact.html" alt="தொடர்பு கொள்ள">
+    </map>
   </header>
 
-  <!-- 2. மெனு பார் -->
-  <nav class="nav-bar">
-    <a href="index.html">முகப்பு</a>
-    <a href="about.html">எங்களைப் பற்றி</a>
-    <a href="#purpose">நோக்கங்கள்</a>
-    <a href="#join">உறுப்பினராக இணையுங்கள்</a>
-    <a href="contact.html">தொடர்புகள்</a>
-    <a href="Management.html">நிர்வாகம்</a>
-    <a href="contact.html">தொடர்பு கொள்ள</a>
-  </nav>
-
-  <!-- 3. தலைவர் மற்றும் விபரங்கள் பகுதி -->
+  <!-- 2. தலைப்பு மற்றும் படங்கள் பகுதி -->
   <section style="background:#fff; padding:20px 10px; border-bottom:2px solid #2e7d32;">
     <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; text-align:center; gap:15px;">
       
       <!-- லோகோ படம் -->
-      <div style="flex:0 0 130px;">
-        <img src="IMG-20260828-WA025...png" alt="Logo" style="width:100%; height:auto;" onerror="this.src='banner.png'; this.style.maxHeight='100px';">
+      <div style="flex:0 0 120px;">
+        <img src="banner.png" alt="Logo" style="max-width:120px; height:auto; display:block; margin:0 auto;">
       </div>
 
       <!-- நடுப்பகுதி விவரங்கள் -->
@@ -53,9 +48,9 @@
         <div style="color:#333; font-size:0.95rem; font-weight:bold;">நிறுவனர் &amp; மாநில தலைவர்</div>
       </div>
 
-      <!-- தலைவர் படம் (பெரிதாக்கப்பட்டு தெளிவாகத் தெரியும் வகையில் மாற்றப்பட்டுள்ளது) -->
+      <!-- தலைவர் படம் (GitHub-இல் உள்ள thalaivar.jpg நேரடியாக இணைக்கப்பட்டுள்ளது) -->
       <div style="flex:0 0 130px;">
-        <img src="thalaivar.jpg" alt="Dr.K.முஹம்மது யஹ்யா" style="width:130px; height:130px; border-radius:50%; object-fit:cover; border:3px solid #2e7d32; display:block; margin:0 auto;">
+        <img src="thalaivar.jpg" alt="Dr.K.முஹம்மது யஹ்யா" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid #2e7d32; display:block; margin:0 auto;" onerror="this.onerror=null; this.src='https://via.placeholder.com/120';">
       </div>
 
     </div>
@@ -66,7 +61,7 @@
     </div>
   </section>
 
-  <!-- 4. முதன்மை உள்ளடக்கம் -->
+  <!-- 3. முதன்மை உள்ளடக்கம் -->
   <main class="container">
     <p style="font-weight: bold; margin-bottom: 15px;">அன்பான உறவுகளே...!</p>
     <p style="margin-bottom: 15px;">
