@@ -11,43 +11,49 @@
     h2 { color: #2e7d32; margin-bottom: 15px; border-bottom: 2px solid #2e7d32; padding-bottom: 5px; }
     ul { margin-left: 20px; margin-bottom: 20px; }
     li { margin-bottom: 8px; }
+
+    /* தொட்டால் இயங்கும் மெனு பார் */
+    .nav-bar { background-color: #004d25; display: flex; justify-content: center; flex-wrap: wrap; padding: 8px 0; gap: 8px; }
+    .nav-bar a { color: white; text-decoration: none; padding: 6px 12px; font-size: 0.9rem; font-weight: bold; }
+    .nav-bar a:hover { background-color: #2e7d32; border-radius: 4px; }
   </style>
 </head>
 <body>
 
-  <!-- 1. புதிய பேனர் படம் மற்றும் க்ளிக் செய்யக்கூடிய மெனு லிங்குகள் (Image Map) -->
+  <!-- 1. பேனர் படம் (மெனு வார்த்தைகள் இல்லாத சுத்தமான பேனராக இருந்தால் நன்று) -->
   <header style="width:100%; overflow:hidden;">
-    <img src="banner.png" alt="TNFSWOV Banner" usemap="#bannermap" style="width:100%; height:auto; display:block;">
-    
-    <map name="bannermap">
-      <area shape="rect" coords="0,200,140,280" href="index.html" alt="முகப்பு">
-      <area shape="rect" coords="141,200,280,280" href="about.html" alt="எங்களைப் பற்றி">
-      <area shape="rect" coords="281,200,420,280" href="#purpose" alt="நோக்கங்கள்">
-      <area shape="rect" coords="421,200,580,280" href="#join" alt="உறுப்பினராக இணையுங்கள்">
-      <area shape="rect" coords="581,200,720,280" href="contact.html" alt="தொடர்புகள்">
-      <area shape="rect" coords="721,200,850,280" href="news.html" alt="செய்திகள்">
-      <area shape="rect" coords="851,200,1000,280" href="contact.html" alt="தொடர்பு கொள்ள">
-    </map>
+    <img src="banner.png" alt="TNFSWOV Banner" style="width:100%; height:auto; display:block;">
   </header>
 
-  <!-- 2. தலைப்பு மற்றும் லோகோ / தலைவர் படங்கள் -->
+  <!-- 2. தொட்டால் வேறு பக்கத்திற்குச் செல்லும் மெனு பார் -->
+  <nav class="nav-bar">
+    <a href="index.html">முகப்பு</a>
+    <a href="about.html">எங்களைப் பற்றி</a>
+    <a href="#purpose">நோக்கங்கள்</a>
+    <a href="#join">உறுப்பினராக இணையுங்கள்</a>
+    <a href="contact.html">தொடர்புகள்</a>
+    <a href="Management.html">நிர்வாகம்</a>
+    <a href="contact.html">தொடர்பு கொள்ள</a>
+  </nav>
+
+  <!-- 3. தலைப்பு, லோகோ மற்றும் தலைவர் படம் -->
   <section style="background:#fff; padding:20px 10px; border-bottom:2px solid #2e7d32;">
     <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; text-align:center; gap:15px;">
       
-      <!-- இடதுபுற லோகோ படம் (IMG-20260828-WA025...) -->
+      <!-- இடதுபுற லோகோ -->
       <div style="flex:0 0 120px;">
-        <img src="IMG-20260828-WA025...png" alt="Logo" style="max-width:120px; height:auto; display:block; margin:0 auto;" onerror="this.style.display='none';">
+        <img src="logo.png" alt="Logo" style="width:110px; height:auto; display:block; margin:0 auto;" onerror="this.style.display='none';">
       </div>
 
-      <!-- நடுப்பகுதி தலைப்பு விவரங்கள் -->
+      <!-- நடுப்பகுதி விவரங்கள் -->
       <div style="flex:1; min-width:280px;">
         <div style="color:#d9534f; font-size:0.95rem; font-weight:bold; margin-bottom:5px;">எல்லாம் வல்ல இறைவனின் பேரருளால்...</div>
-        <div style="color:#b91c1c; font-size:1.6rem; font-weight:bold; margin:5px 0; line-height:1.3;">தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</div>
-        <div style="color:#2e7d32; font-size:1.4rem; font-weight:bold; margin:5px 0;">Dr.K.முஹம்மது யஹ்யா</div>
+        <div style="color:#b91c1c; font-size:1.5rem; font-weight:bold; margin:5px 0; line-height:1.3;">தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</div>
+        <div style="color:#2e7d32; font-size:1.3rem; font-weight:bold; margin:5px 0;">Dr.K.முஹம்மது யஹ்யா</div>
         <div style="color:#333; font-size:0.95rem; font-weight:bold;">நிறுவனர் &amp; மாநில தலைவர்</div>
       </div>
 
-      <!-- வலதுபுற தலைவர் படம் (thalaivar.jpg) -->
+      <!-- வலதுபுற தலைவர் படம் -->
       <div style="flex:0 0 130px;">
         <img src="thalaivar.jpg" alt="Dr.K.முஹம்மது யஹ்யா" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid #2e7d32; display:block; margin:0 auto;">
       </div>
@@ -60,7 +66,7 @@
     </div>
   </section>
 
-  <!-- 3. முதன்மை உள்ளடக்கப் பகுதி -->
+  <!-- 4. முதன்மை உள்ளடக்கம் -->
   <main class="container">
     <p style="font-weight: bold; margin-bottom: 15px;">அன்பான உறவுகளே...!</p>
     <p style="margin-bottom: 15px;">
