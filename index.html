@@ -6,14 +6,14 @@
   <title>தமிழ்நாடு சமூக நல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; scroll-behavior: smooth; }
     
     .main-wrapper { max-width: 1100px; margin: 0 auto; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     
     /* மெனு பார் */
-    .nav-bar { background-color: #0d47a1; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px 0; gap: 15px; }
-    .nav-bar a { color: white; text-decoration: none; padding: 5px 10px; font-size: 0.95rem; font-weight: bold; }
-    .nav-bar a:hover { background-color: #1565c0; border-radius: 4px; }
+    .nav-bar { background-color: #004d25; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px 0; gap: 15px; }
+    .nav-bar a { color: white; text-decoration: none; padding: 6px 12px; font-size: 0.95rem; font-weight: bold; border-radius: 4px; }
+    .nav-bar a:hover { background-color: #1565c0; }
 
     .container { padding: 25px; }
     
@@ -45,15 +45,16 @@
     </header>
 
     <!-- 2. மெனு பார் -->
-    <nav class="nav-bar" style="background-color: #004d25;">
+    <nav class="nav-bar">
       <a href="index.html">முகப்பு</a>
-      <a href="about.html">எங்களைப் பற்றி</a>
+      <a href="#about">எங்களைப் பற்றி</a>
       <a href="Management.html">நிர்வாகம்</a>
-      <a href="#join">உறுப்பினராக இணையுங்கள்</a>
+      <!-- SurveyHeart லிங்க் இங்கே கொடுக்கப்பட்டுள்ளது -->
+      <a href="https://surveyheart.com/" target="_blank">உறுப்பினராக இணையுங்கள்</a>
       <a href="contact.html">தொடர்புகொள்ள</a>
     </nav>
 
-    <!-- 3. லோகோ, தலைப்பு, தலைவர் அடங்கிய அகலமான படம் (thalaivar.jpg) -->
+    <!-- 3. லோகோ, தலைப்பு, தலைவர் அடங்கிய படம் -->
     <section style="width:100%; padding:10px 0;">
       <img src="thalaivar.jpg" alt="TNFSWOV Header" style="width:100%; height:auto; display:block;">
     </section>
@@ -65,7 +66,7 @@
         சமூக நலனுக்காக அர்ப்பணிப்புடன் செயல்பட்டு வரும் அறக்கட்டளைகள், சமூக நல அமைப்புகள், தன்னார்வ அமைப்புகள், முதியோர் இல்லங்கள், குழந்தைகள் இல்லங்கள், மாற்றுத்திறனாளிகள் நல அமைப்புகள், கல்வி மற்றும் மருத்துவ சேவை அமைப்புகள், சுற்றுச்சூழல் அமைப்புகள், இரத்ததான அமைப்புகள் மற்றும் தனிப்பட்ட சமூக ஆர்வலர்கள் ஆகிய அனைவரையும் ஒரே குடையின் கீழ் ஒருங்கிணைக்கும் உயரிய நோக்கத்துடன் தமிழ்நாடு சமூகநல அமைப்புகள் மற்றும் தன்னார்வலர்கள் கூட்டமைப்பு உருவாக்கப்படுகிறது.
       </p>
 
-      <h2>எங்கள் முக்கிய நோக்கங்கள்:</h2>
+      <h2 id="about">எங்கள் முக்கிய நோக்கங்கள்:</h2>
       <ul class="checklist">
         <li>சமூக சேவை அமைப்புகளை ஒருங்கிணைத்தல்</li>
         <li>சமூக ஆர்வலர்களுக்கு தேசிய மாநில அளவிலான அடையாளம் உருவாக்குதல்</li>
@@ -78,7 +79,7 @@
 
       <hr>
 
-      <h2 id="join">யார் உறுப்பினராக இணையலாம்?</h2>
+      <h2>யார் உறுப்பினராக இணையலாம்?</h2>
       <ul class="bullet-list">
         <li>பதிவு செய்யப்பட்ட அறக்கட்டளைகள்</li>
         <li>சமூக நல அமைப்புகள்</li>
