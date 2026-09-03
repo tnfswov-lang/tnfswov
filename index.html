@@ -11,8 +11,9 @@
     h2 { color: #2e7d32; margin-bottom: 15px; border-bottom: 2px solid #2e7d32; padding-bottom: 5px; }
     ul { margin-left: 20px; margin-bottom: 20px; }
     li { margin-bottom: 8px; }
-    
-    .nav-bar { background-color: #004d25; display: flex; justify-content: space-around; flex-wrap: wrap; padding: 10px 0; }
+
+    /* மெனு பார் */
+    .nav-bar { background-color: #004d25; display: flex; justify-content: center; flex-wrap: wrap; padding: 10px 0; gap: 15px; }
     .nav-bar a { color: white; text-decoration: none; padding: 8px 12px; font-size: 0.95rem; font-weight: bold; }
     .nav-bar a:hover { background-color: #2e7d32; border-radius: 4px; }
   </style>
@@ -24,7 +25,7 @@
     <img src="banner.png" alt="TNFSWOV Banner" style="width:100%; height:auto; display:block;">
   </header>
 
-  <!-- 2. மெனு பார் (லிங்க்குகள் செயல்பட) -->
+  <!-- 2. மெனு பார் -->
   <nav class="nav-bar">
     <a href="index.html">முகப்பு</a>
     <a href="about.html">எங்களைப் பற்றி</a>
@@ -35,13 +36,13 @@
     <a href="contact.html">தொடர்பு கொள்ள</a>
   </nav>
 
-  <!-- 3. தலைப்பு மற்றும் படங்கள் -->
+  <!-- 3. தலைவர் மற்றும் விபரங்கள் பகுதி -->
   <section style="background:#fff; padding:20px 10px; border-bottom:2px solid #2e7d32;">
     <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; text-align:center; gap:15px;">
       
-      <!-- லோகோ படம் (GitHub-இல் உள்ள சரியான பெயரை இடவும்) -->
-      <div>
-        <img src="IMG-20260828-WA025...png" alt="Logo" style="max-width:130px; height:auto;" onerror="this.style.display='none'">
+      <!-- லோகோ படம் -->
+      <div style="flex:0 0 130px;">
+        <img src="IMG-20260828-WA025...png" alt="Logo" style="width:100%; height:auto;" onerror="this.src='banner.png'; this.style.maxHeight='100px';">
       </div>
 
       <!-- நடுப்பகுதி விவரங்கள் -->
@@ -52,9 +53,9 @@
         <div style="color:#333; font-size:0.95rem; font-weight:bold;">நிறுவனர் &amp; மாநில தலைவர்</div>
       </div>
 
-      <!-- தலைவர் படம் -->
-      <div>
-        <img src="thalaivar.jpg" alt="Leader" style="max-width:120px; border-radius:50%; height:auto; display:block;">
+      <!-- தலைவர் படம் (பெரிதாக்கப்பட்டு தெளிவாகத் தெரியும் வகையில் மாற்றப்பட்டுள்ளது) -->
+      <div style="flex:0 0 130px;">
+        <img src="thalaivar.jpg" alt="Dr.K.முஹம்மது யஹ்யா" style="width:130px; height:130px; border-radius:50%; object-fit:cover; border:3px solid #2e7d32; display:block; margin:0 auto;">
       </div>
 
     </div>
@@ -65,7 +66,7 @@
     </div>
   </section>
 
-  <!-- 4. முதன்மை ഉള്ളடக்கம் -->
+  <!-- 4. முதன்மை உள்ளடக்கம் -->
   <main class="container">
     <p style="font-weight: bold; margin-bottom: 15px;">அன்பான உறவுகளே...!</p>
     <p style="margin-bottom: 15px;">
