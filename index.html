@@ -7,15 +7,17 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
     
-    /* 1. மேல்பகுதி நீளமான கை கோர்த்த படம் */
+    /* 1. மேல்பகுதி மக்கள் கைகோர்த்த பேனர் படம் */
     .top-banner {
       width: 100%;
       background-color: #0d5c63;
       text-align: center;
+      overflow: hidden;
     }
     .top-banner img {
       width: 100%;
-      max-height: 250px;
+      height: auto;
+      max-height: 380px;
       object-fit: cover;
       display: block;
     }
@@ -63,9 +65,9 @@
 </head>
 <body>
 
-  <!-- 1. மேல்பகுதி நீளமான கை கோர்த்த படம் (banner.jpg அல்லது உங்கள் பழைய நீளப் படம்) -->
+  <!-- 1. மேல்பகுதி மக்கள் கைகோர்த்த படம் (Logo.png) -->
   <div class="top-banner">
-    <img src="banner.jpg" alt="TNFSWOV Header Banner">
+    <img src="Logo.png" alt="TNFSWOV Banner Image" onerror="this.src='logo.png';">
   </div>
 
   <!-- 2. தலைப்பு மற்றும் நடுப்பகுதி வரி -->
